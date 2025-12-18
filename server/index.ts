@@ -3,9 +3,12 @@ import { registerRoutes } from "./routes";
 import { setupVite, serveStatic, log } from "./vite";
 
 const app = express();
+
+// Middleware for handling JSON and URL-encoded bodies
 app.use(express.json());
 app.use(express.urlencoded({ extended: false }));
 
+// Logging middleware to log API requests
 app.use((req, res, next) => {
   const start = Date.now();
   const path = req.path;
@@ -37,43 +40,36 @@ app.use((req, res, next) => {
 });
 
 (async () => {
+  // Register all routes
   const server = await registerRoutes(app);
 
+  // Error handling middleware
   app.use((err: any, _req: Request, res: Response, _next: NextFunction) => {
     const status = err.status || err.statusCode || 500;
     const message = err.message || "Internal Server Error";
-
     res.status(status).json({ message });
     throw err;
   });
 
-  // importantly only setup vite in development and after
-  // setting up all the other routes so the catch-all route
-  // doesn't interfere with the other routes
+  // Set up Vite in development mode, else serve static assets in production
   if (app.get("env") === "development") {
     await setupVite(app, server);
   } else {
     serveStatic(app);
   }
 
-  // ALWAYS serve the app on the port specified in the environment variable PORT
-  // Other ports are firewalled. Default to 5000 if not specified.
-  // this serves both the API and the client.
-  // It is the only port that is not firewalled.
-// ALWAYS serve the app on the port specified in the environment variable PORT
-// Default to 5000 if not specified.
-const port = parseInt(process.env.PORT || "5000", 10);
+  // Set the port from environment variable, default to 5000 if not set
+  const port = parseInt(process.env.PORT || "5000", 10);
 
-// Use localhost on Windows; 0.0.0.0 elsewhere
-const host = process.platform === "win32" ? "127.0.0.1" : "0.0.0.0";
+  // Bind to localhost on Windows; 0.0.0.0 elsewhere
+  const host = process.platform === "win32" ? "127.0.0.1" : "0.0.0.0";
 
-try {
-  app.listen(port, host, () => {
-    log(`✅ Server running at http://${host}:${port}`);
-  });
-} catch (err) {
-  console.error("❌ Failed to start server:", err);
-  process.exit(1);
-}
-
+  try {
+    app.listen(port, host, () => {
+      log(`✅ Server running at http://${host}:${port}`);
+    });
+  } catch (err) {
+    console.error("❌ Failed to start server:", err);
+    process.exit(1);
+  }
 })();

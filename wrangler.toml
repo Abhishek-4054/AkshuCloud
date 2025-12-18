@@ -1,0 +1,10 @@
+name = "portfolio-worker"  # Change this to your desired Worker name
+compatibility_date = "2025-12-18"  # Set to today's date or your deployment date
+
+# Path to your Worker entry point (replace with your actual file path)
+main = "server/index.ts"  # Assuming your Worker entry point is at 'server/index.ts'
+
+# Path to your assets directory (update if your Vite build outputs to a different folder)
+assets = {
+  directory = "./dist"  # Path to the built frontend assets (e.g., Vite build output)
+}
