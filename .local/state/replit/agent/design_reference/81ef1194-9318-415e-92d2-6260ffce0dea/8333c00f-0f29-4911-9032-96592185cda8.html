@@ -1,0 +1,876 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Abhishek Chauhan - Cloud & DevOps Engineer | Portfolio</title>
+    <meta name="description" content="Professional portfolio of Abhishek Chauhan - Cloud & DevOps Engineer with 3+ years experience in AWS, Healthcare IT, and Infrastructure Operations">
+    <meta name="keywords" content="Cloud Engineer, DevOps, AWS, Azure, Terraform, Kubernetes, Healthcare IT, HIPAA, Infrastructure">
+    
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+    tailwind.config = {
+        theme: {
+            extend: {
+                fontFamily: {
+                    'inter': ['Inter', 'system-ui', 'sans-serif'],
+                },
+                colors: {
+                    'navy': {
+                        50: '#f1f5f9',
+                        900: '#0f172a',
+                        800: '#1e293b'
+                    }
+                },
+                animation: {
+                    'fade-in': 'fadeIn 0.6s ease-in-out',
+                    'slide-up': 'slideUp 0.8s ease-out',
+                    'float': 'float 3s ease-in-out infinite',
+                }
+            }
+        }
+    };
+    </script>
+    
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    
+    <style>
+        @keyframes fadeIn {
+            from { opacity: 0; }
+            to { opacity: 1; }
+        }
+        
+        @keyframes slideUp {
+            from { 
+                opacity: 0; 
+                transform: translateY(30px); 
+            }
+            to { 
+                opacity: 1; 
+                transform: translateY(0); 
+            }
+        }
+        
+        @keyframes float {
+            0%, 100% { transform: translateY(0px); }
+            50% { transform: translateY(-10px); }
+        }
+        
+        html {
+            scroll-behavior: smooth;
+        }
+        
+        .gradient-text {
+            background: linear-gradient(135deg, #3b82f6 0%, #1d4ed8 100%);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+        }
+        
+        .card-hover {
+            transition: all 0.3s ease;
+        }
+        
+        .card-hover:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 20px 25px -5px rgb(0 0 0 / 0.1), 0 8px 10px -6px rgb(0 0 0 / 0.1);
+        }
+        
+        .skill-badge {
+            transition: all 0.2s ease;
+        }
+        
+        .skill-badge:hover {
+            transform: scale(1.05);
+        }
+    </style>
+</head>
+
+<body class="font-inter bg-white text-gray-900">
+    <!-- @COMPONENT: Header/Navigation -->
+    <header class="fixed top-0 left-0 right-0 bg-white/95 backdrop-blur-sm border-b border-gray-200 z-50">
+        <nav class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex justify-between items-center h-16">
+                <div class="flex-shrink-0">
+                    <h1 class="text-xl font-bold text-navy-800">Abhishek Chauhan</h1>
+                </div>
+                
+                <!-- Desktop Navigation -->
+                <div class="hidden md:block">
+                    <div class="ml-10 flex items-baseline space-x-8">
+                        <a href="#home" class="nav-link text-gray-700 hover:text-blue-600 px-3 py-2 text-sm font-medium transition-colors">Home</a>
+                        <a href="#about" class="nav-link text-gray-700 hover:text-blue-600 px-3 py-2 text-sm font-medium transition-colors">About</a>
+                        <a href="#experience" class="nav-link text-gray-700 hover:text-blue-600 px-3 py-2 text-sm font-medium transition-colors">Experience</a>
+                        <a href="#skills" class="nav-link text-gray-700 hover:text-blue-600 px-3 py-2 text-sm font-medium transition-colors">Skills</a>
+                        <a href="#certifications" class="nav-link text-gray-700 hover:text-blue-600 px-3 py-2 text-sm font-medium transition-colors">Certifications</a>
+                        <a href="#contact" class="nav-link text-gray-700 hover:text-blue-600 px-3 py-2 text-sm font-medium transition-colors">Contact</a>
+                    </div>
+                </div>
+                
+                <!-- Mobile menu button -->
+                <div class="md:hidden">
+                    <button type="button" class="mobile-menu-btn bg-gray-100 inline-flex items-center justify-center p-2 rounded-md text-gray-400 hover:text-gray-500 hover:bg-gray-200 focus:outline-none focus:ring-2 focus:ring-inset focus:ring-blue-500">
+                        <i class="fas fa-bars text-lg"></i>
+                    </button>
+                </div>
+            </div>
+            
+            <!-- Mobile menu -->
+            <div class="mobile-menu hidden md:hidden">
+                <div class="px-2 pt-2 pb-3 space-y-1 sm:px-3 bg-white border-t border-gray-200">
+                    <a href="#home" class="mobile-nav-link block px-3 py-2 text-base font-medium text-gray-700 hover:text-blue-600">Home</a>
+                    <a href="#about" class="mobile-nav-link block px-3 py-2 text-base font-medium text-gray-700 hover:text-blue-600">About</a>
+                    <a href="#experience" class="mobile-nav-link block px-3 py-2 text-base font-medium text-gray-700 hover:text-blue-600">Experience</a>
+                    <a href="#skills" class="mobile-nav-link block px-3 py-2 text-base font-medium text-gray-700 hover:text-blue-600">Skills</a>
+                    <a href="#certifications" class="mobile-nav-link block px-3 py-2 text-base font-medium text-gray-700 hover:text-blue-600">Certifications</a>
+                    <a href="#contact" class="mobile-nav-link block px-3 py-2 text-base font-medium text-gray-700 hover:text-blue-600">Contact</a>
+                </div>
+            </div>
+        </nav>
+    </header>
+    <!-- @END_COMPONENT: Header/Navigation -->
+
+    <!-- @COMPONENT: Hero Section -->
+    <section id="home" class="min-h-screen flex items-center justify-center bg-gradient-to-br from-slate-50 via-blue-50 to-indigo-100 pt-16">
+        <div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
+            <div class="animate-fade-in">
+                <h1 class="text-5xl md:text-6xl lg:text-7xl font-bold text-navy-800 mb-6 leading-tight">
+                    <span class="gradient-text">Cloud & DevOps</span><br>
+                    <span class="text-navy-800">Engineer</span>
+                </h1>
+                <p class="text-xl md:text-2xl text-gray-600 mb-8 max-w-3xl mx-auto leading-relaxed">
+                    3+ years of experience in AWS, Infrastructure Operations, and Healthcare IT Integration
+                </p>
+                <div class="flex flex-col sm:flex-row justify-center items-center space-y-4 sm:space-y-0 sm:space-x-6">
+                    <a href="#contact" class="bg-blue-600 hover:bg-blue-700 text-white px-8 py-4 rounded-lg font-semibold transition-colors duration-200 shadow-lg hover:shadow-xl">
+                        Get In Touch
+                    </a>
+                    <a href="#" class="border-2 border-blue-600 text-blue-600 hover:bg-blue-600 hover:text-white px-8 py-4 rounded-lg font-semibold transition-all duration-200">
+                        <i class="fas fa-download mr-2"></i>Download Resume
+                    </a>
+                </div>
+            </div>
+            
+            <!-- Floating elements for visual appeal -->
+            <div class="absolute top-20 left-10 animate-float hidden lg:block">
+                <div class="w-16 h-16 bg-blue-500/10 rounded-full flex items-center justify-center">
+                    <i class="fab fa-aws text-2xl text-blue-600"></i>
+                </div>
+            </div>
+            <div class="absolute top-40 right-16 animate-float hidden lg:block" style="animation-delay: 1s;">
+                <div class="w-12 h-12 bg-emerald-500/10 rounded-full flex items-center justify-center">
+                    <i class="fab fa-docker text-xl text-emerald-600"></i>
+                </div>
+            </div>
+            <div class="absolute bottom-32 left-20 animate-float hidden lg:block" style="animation-delay: 2s;">
+                <div class="w-14 h-14 bg-indigo-500/10 rounded-full flex items-center justify-center">
+                    <i class="fas fa-cloud text-xl text-indigo-600"></i>
+                </div>
+            </div>
+        </div>
+    </section>
+    <!-- @END_COMPONENT: Hero Section -->
+
+    <!-- @COMPONENT: About Section -->
+    <section id="about" class="py-20 bg-white">
+        <div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center mb-16">
+                <h2 class="text-4xl font-bold text-navy-800 mb-4">About Me</h2>
+                <div class="w-24 h-1 bg-gradient-to-r from-blue-500 to-indigo-600 mx-auto rounded-full"></div>
+            </div>
+            
+            <div class="grid lg:grid-cols-2 gap-12 items-center">
+                <div class="space-y-6">
+                    <div class="prose prose-lg text-gray-600">
+                        <p class="text-lg leading-relaxed">
+                            Cloud and DevOps Engineer skilled in AWS, Terraform, Docker, Kubernetes, CI/CD, Linux, and healthcare IT integrations (PACS, HIS, RIS, EMR). Certified in AWS & Azure, passionate about secure and scalable infrastructure.
+                        </p>
+                        <p class="text-lg leading-relaxed">
+                            With a strong foundation in cloud architecture and a deep understanding of healthcare IT systems, I specialize in building robust, compliant, and scalable infrastructure solutions that drive business success.
+                        </p>
+                    </div>
+                    
+                    <div class="grid grid-cols-2 gap-6 mt-8">
+                        <div class="text-center p-6 bg-gray-50 rounded-xl">
+                            <div class="text-3xl font-bold text-blue-600 mb-2">3+</div>
+                            <div class="text-gray-600 font-medium">Years Experience</div>
+                        </div>
+                        <div class="text-center p-6 bg-gray-50 rounded-xl">
+                            <div class="text-3xl font-bold text-emerald-600 mb-2">4</div>
+                            <div class="text-gray-600 font-medium">Certifications</div>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="space-y-6">
+                    <div class="bg-gradient-to-br from-blue-50 to-indigo-50 p-8 rounded-2xl">
+                        <h3 class="text-xl font-semibold text-navy-800 mb-4">Professional Mission</h3>
+                        <p class="text-gray-600 leading-relaxed">
+                            To leverage cutting-edge cloud technologies and DevOps practices to create secure, scalable, and efficient infrastructure solutions that enable organizations to focus on their core business objectives while maintaining the highest standards of security and compliance.
+                        </p>
+                    </div>
+                    
+                    <div class="bg-gradient-to-br from-emerald-50 to-teal-50 p-8 rounded-2xl">
+                        <h3 class="text-xl font-semibold text-navy-800 mb-4">Core Values</h3>
+                        <ul class="space-y-2 text-gray-600">
+                            <li class="flex items-center"><i class="fas fa-check-circle text-emerald-600 mr-3"></i>Innovation & Continuous Learning</li>
+                            <li class="flex items-center"><i class="fas fa-check-circle text-emerald-600 mr-3"></i>Security & Compliance First</li>
+                            <li class="flex items-center"><i class="fas fa-check-circle text-emerald-600 mr-3"></i>Scalable & Sustainable Solutions</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <!-- @END_COMPONENT: About Section -->
+
+    <!-- @COMPONENT: Experience Section -->
+    <section id="experience" class="py-20 bg-gray-50">
+        <div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center mb-16">
+                <h2 class="text-4xl font-bold text-navy-800 mb-4">Professional Experience</h2>
+                <div class="w-24 h-1 bg-gradient-to-r from-blue-500 to-indigo-600 mx-auto rounded-full"></div>
+            </div>
+            
+            <div class="space-y-12">
+                <!-- Current Position -->
+                <div class="card-hover bg-white rounded-2xl shadow-lg p-8 border-l-4 border-blue-500">
+                    <div class="flex flex-col lg:flex-row lg:items-start lg:justify-between mb-6">
+                        <div class="flex-1">
+                            <h3 class="text-2xl font-bold text-navy-800 mb-2">Cloud & DevOps Engineer</h3>
+                            <div class="text-lg font-semibold text-blue-600 mb-2">Feedback Medical</div>
+                            <div class="text-gray-500 font-medium">January 2025 – Present</div>
+                        </div>
+                        <div class="mt-4 lg:mt-0">
+                            <span class="inline-flex items-center px-3 py-1 rounded-full text-sm font-medium bg-emerald-100 text-emerald-800">
+                                Current Role
+                            </span>
+                        </div>
+                    </div>
+                    
+                    <div class="space-y-4">
+                        <div class="flex items-start space-x-3">
+                            <i class="fas fa-cloud-upload-alt text-blue-500 mt-1"></i>
+                            <p class="text-gray-700">Deployed and configured cloud-native healthcare applications on AWS, ensuring optimal performance and scalability for mission-critical systems.</p>
+                        </div>
+                        <div class="flex items-start space-x-3">
+                            <i class="fas fa-cogs text-blue-500 mt-1"></i>
+                            <p class="text-gray-700">Automated infrastructure provisioning and management with Terraform and Jenkins, reducing deployment time by 60% and eliminating manual errors.</p>
+                        </div>
+                        <div class="flex items-start space-x-3">
+                            <i class="fas fa-shield-alt text-blue-500 mt-1"></i>
+                            <p class="text-gray-700">Ensured HIPAA compliance across all systems and provided comprehensive support to hospital IT teams for seamless integration and operations.</p>
+                        </div>
+                        <div class="flex items-start space-x-3">
+                            <i class="fas fa-hospital text-blue-500 mt-1"></i>
+                            <p class="text-gray-700">Specialized in healthcare IT system integrations including PACS, HIS, RIS, and EMR systems, ensuring secure data flow and interoperability.</p>
+                        </div>
+                    </div>
+                    
+                    <div class="mt-6 flex flex-wrap gap-2">
+                        <span class="px-3 py-1 bg-blue-100 text-blue-800 rounded-full text-sm font-medium">AWS</span>
+                        <span class="px-3 py-1 bg-blue-100 text-blue-800 rounded-full text-sm font-medium">Terraform</span>
+                        <span class="px-3 py-1 bg-blue-100 text-blue-800 rounded-full text-sm font-medium">Jenkins</span>
+                        <span class="px-3 py-1 bg-blue-100 text-blue-800 rounded-full text-sm font-medium">HIPAA</span>
+                        <span class="px-3 py-1 bg-blue-100 text-blue-800 rounded-full text-sm font-medium">Healthcare IT</span>
+                    </div>
+                </div>
+                
+                <!-- Previous Position -->
+                <div class="card-hover bg-white rounded-2xl shadow-lg p-8 border-l-4 border-indigo-500">
+                    <div class="flex flex-col lg:flex-row lg:items-start lg:justify-between mb-6">
+                        <div class="flex-1">
+                            <h3 class="text-2xl font-bold text-navy-800 mb-2">Software Engineer / DevOps Specialist</h3>
+                            <div class="text-lg font-semibold text-indigo-600 mb-2">Cognizant Technology Solutions</div>
+                            <div class="text-gray-500 font-medium">July 2022 – September 2024</div>
+                        </div>
+                        <div class="mt-4 lg:mt-0">
+                            <span class="inline-flex items-center px-3 py-1 rounded-full text-sm font-medium bg-gray-100 text-gray-800">
+                                2+ Years
+                            </span>
+                        </div>
+                    </div>
+                    
+                    <div class="space-y-4">
+                        <div class="flex items-start space-x-3">
+                            <i class="fas fa-code text-indigo-500 mt-1"></i>
+                            <p class="text-gray-700">Developed robust RESTful APIs using Java Spring Boot, serving over 10,000 daily requests with 99.9% uptime and optimized performance.</p>
+                        </div>
+                        <div class="flex items-start space-x-3">
+                            <i class="fas fa-server text-indigo-500 mt-1"></i>
+                            <p class="text-gray-700">Automated AWS infrastructure provisioning with Terraform, managing multi-environment deployments across development, staging, and production.</p>
+                        </div>
+                        <div class="flex items-start space-x-3">
+                            <i class="fas fa-rocket text-indigo-500 mt-1"></i>
+                            <p class="text-gray-700">Built and maintained CI/CD pipelines with Jenkins, implementing automated testing and deployment strategies that reduced release cycles from weeks to hours.</p>
+                        </div>
+                        <div class="flex items-start space-x-3">
+                            <i class="fas fa-users text-indigo-500 mt-1"></i>
+                            <p class="text-gray-700">Collaborated with cross-functional teams to implement DevOps best practices, improving overall development efficiency and code quality.</p>
+                        </div>
+                    </div>
+                    
+                    <div class="mt-6 flex flex-wrap gap-2">
+                        <span class="px-3 py-1 bg-indigo-100 text-indigo-800 rounded-full text-sm font-medium">Java Spring Boot</span>
+                        <span class="px-3 py-1 bg-indigo-100 text-indigo-800 rounded-full text-sm font-medium">AWS</span>
+                        <span class="px-3 py-1 bg-indigo-100 text-indigo-800 rounded-full text-sm font-medium">Terraform</span>
+                        <span class="px-3 py-1 bg-indigo-100 text-indigo-800 rounded-full text-sm font-medium">Jenkins</span>
+                        <span class="px-3 py-1 bg-indigo-100 text-indigo-800 rounded-full text-sm font-medium">CI/CD</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <!-- @END_COMPONENT: Experience Section -->
+
+    <!-- @COMPONENT: Skills Section -->
+    <section id="skills" class="py-20 bg-white">
+        <div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center mb-16">
+                <h2 class="text-4xl font-bold text-navy-800 mb-4">Technical Expertise</h2>
+                <div class="w-24 h-1 bg-gradient-to-r from-blue-500 to-indigo-600 mx-auto rounded-full"></div>
+                <p class="text-lg text-gray-600 mt-6 max-w-3xl mx-auto">
+                    Enterprise-level technical competencies with real-world application across cloud infrastructure, DevOps automation, and healthcare IT systems.
+                </p>
+            </div>
+            
+            <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
+                <!-- Cloud Infrastructure -->
+                <div class="card-hover bg-gradient-to-br from-blue-50 to-indigo-50 p-8 rounded-2xl">
+                    <div class="flex items-center mb-6">
+                        <div class="w-12 h-12 bg-blue-500 rounded-lg flex items-center justify-center mr-4">
+                            <i class="fas fa-cloud text-white text-xl"></i>
+                        </div>
+                        <h3 class="text-xl font-bold text-navy-800">Cloud Infrastructure & Architecture</h3>
+                    </div>
+                    <div class="space-y-3">
+                        <div class="skill-badge flex items-center justify-between p-3 bg-white rounded-lg shadow-sm">
+                            <span class="font-medium text-gray-700">Amazon Web Services (AWS)</span>
+                            <span class="text-sm text-blue-600 font-semibold">Expert</span>
+                        </div>
+                        <div class="skill-badge flex items-center justify-between p-3 bg-white rounded-lg shadow-sm">
+                            <span class="font-medium text-gray-700">Microsoft Azure</span>
+                            <span class="text-sm text-blue-600 font-semibold">Advanced</span>
+                        </div>
+                        <div class="skill-badge flex items-center justify-between p-3 bg-white rounded-lg shadow-sm">
+                            <span class="font-medium text-gray-700">Cloud Architecture Design</span>
+                            <span class="text-sm text-blue-600 font-semibold">Expert</span>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- DevOps & Automation -->
+                <div class="card-hover bg-gradient-to-br from-emerald-50 to-teal-50 p-8 rounded-2xl">
+                    <div class="flex items-center mb-6">
+                        <div class="w-12 h-12 bg-emerald-500 rounded-lg flex items-center justify-center mr-4">
+                            <i class="fas fa-cogs text-white text-xl"></i>
+                        </div>
+                        <h3 class="text-xl font-bold text-navy-800">DevOps & CI/CD Pipelines</h3>
+                    </div>
+                    <div class="space-y-3">
+                        <div class="skill-badge flex items-center justify-between p-3 bg-white rounded-lg shadow-sm">
+                            <span class="font-medium text-gray-700">Terraform (IaC)</span>
+                            <span class="text-sm text-emerald-600 font-semibold">Expert</span>
+                        </div>
+                        <div class="skill-badge flex items-center justify-between p-3 bg-white rounded-lg shadow-sm">
+                            <span class="font-medium text-gray-700">Docker & Kubernetes</span>
+                            <span class="text-sm text-emerald-600 font-semibold">Advanced</span>
+                        </div>
+                        <div class="skill-badge flex items-center justify-between p-3 bg-white rounded-lg shadow-sm">
+                            <span class="font-medium text-gray-700">Jenkins & GitHub Actions</span>
+                            <span class="text-sm text-emerald-600 font-semibold">Expert</span>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- Healthcare IT -->
+                <div class="card-hover bg-gradient-to-br from-purple-50 to-pink-50 p-8 rounded-2xl">
+                    <div class="flex items-center mb-6">
+                        <div class="w-12 h-12 bg-purple-500 rounded-lg flex items-center justify-center mr-4">
+                            <i class="fas fa-hospital text-white text-xl"></i>
+                        </div>
+                        <h3 class="text-xl font-bold text-navy-800">Healthcare IT Integration</h3>
+                    </div>
+                    <div class="space-y-3">
+                        <div class="skill-badge flex items-center justify-between p-3 bg-white rounded-lg shadow-sm">
+                            <span class="font-medium text-gray-700">PACS, HIS, RIS Systems</span>
+                            <span class="text-sm text-purple-600 font-semibold">Expert</span>
+                        </div>
+                        <div class="skill-badge flex items-center justify-between p-3 bg-white rounded-lg shadow-sm">
+                            <span class="font-medium text-gray-700">EMR Integration</span>
+                            <span class="text-sm text-purple-600 font-semibold">Advanced</span>
+                        </div>
+                        <div class="skill-badge flex items-center justify-between p-3 bg-white rounded-lg shadow-sm">
+                            <span class="font-medium text-gray-700">HIPAA Compliance</span>
+                            <span class="text-sm text-purple-600 font-semibold">Expert</span>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- Infrastructure & Automation -->
+                <div class="card-hover bg-gradient-to-br from-orange-50 to-red-50 p-8 rounded-2xl">
+                    <div class="flex items-center mb-6">
+                        <div class="w-12 h-12 bg-orange-500 rounded-lg flex items-center justify-center mr-4">
+                            <i class="fas fa-server text-white text-xl"></i>
+                        </div>
+                        <h3 class="text-xl font-bold text-navy-800">Infrastructure & Middleware</h3>
+                    </div>
+                    <div class="space-y-3">
+                        <div class="skill-badge flex items-center justify-between p-3 bg-white rounded-lg shadow-sm">
+                            <span class="font-medium text-gray-700">Linux System Administration</span>
+                            <span class="text-sm text-orange-600 font-semibold">Expert</span>
+                        </div>
+                        <div class="skill-badge flex items-center justify-between p-3 bg-white rounded-lg shadow-sm">
+                            <span class="font-medium text-gray-700">Nginx, Apache, HAProxy</span>
+                            <span class="text-sm text-orange-600 font-semibold">Advanced</span>
+                        </div>
+                        <div class="skill-badge flex items-center justify-between p-3 bg-white rounded-lg shadow-sm">
+                            <span class="font-medium text-gray-700">Tomcat Application Server</span>
+                            <span class="text-sm text-orange-600 font-semibold">Advanced</span>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- Monitoring & Security -->
+                <div class="card-hover bg-gradient-to-br from-cyan-50 to-blue-50 p-8 rounded-2xl">
+                    <div class="flex items-center mb-6">
+                        <div class="w-12 h-12 bg-cyan-500 rounded-lg flex items-center justify-center mr-4">
+                            <i class="fas fa-shield-alt text-white text-xl"></i>
+                        </div>
+                        <h3 class="text-xl font-bold text-navy-800">Monitoring & Observability</h3>
+                    </div>
+                    <div class="space-y-3">
+                        <div class="skill-badge flex items-center justify-between p-3 bg-white rounded-lg shadow-sm">
+                            <span class="font-medium text-gray-700">Prometheus & Grafana</span>
+                            <span class="text-sm text-cyan-600 font-semibold">Expert</span>
+                        </div>
+                        <div class="skill-badge flex items-center justify-between p-3 bg-white rounded-lg shadow-sm">
+                            <span class="font-medium text-gray-700">ELK Stack (Elasticsearch)</span>
+                            <span class="text-sm text-cyan-600 font-semibold">Advanced</span>
+                        </div>
+                        <div class="skill-badge flex items-center justify-between p-3 bg-white rounded-lg shadow-sm">
+                            <span class="font-medium text-gray-700">Security & Compliance</span>
+                            <span class="text-sm text-cyan-600 font-semibold">Expert</span>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- Databases & Development -->
+                <div class="card-hover bg-gradient-to-br from-indigo-50 to-purple-50 p-8 rounded-2xl">
+                    <div class="flex items-center mb-6">
+                        <div class="w-12 h-12 bg-indigo-500 rounded-lg flex items-center justify-center mr-4">
+                            <i class="fas fa-database text-white text-xl"></i>
+                        </div>
+                        <h3 class="text-xl font-bold text-navy-800">Databases & Development</h3>
+                    </div>
+                    <div class="space-y-3">
+                        <div class="skill-badge flex items-center justify-between p-3 bg-white rounded-lg shadow-sm">
+                            <span class="font-medium text-gray-700">MySQL, MongoDB, Redis</span>
+                            <span class="text-sm text-indigo-600 font-semibold">Advanced</span>
+                        </div>
+                        <div class="skill-badge flex items-center justify-between p-3 bg-white rounded-lg shadow-sm">
+                            <span class="font-medium text-gray-700">Java (Spring Boot)</span>
+                            <span class="text-sm text-indigo-600 font-semibold">Intermediate</span>
+                        </div>
+                        <div class="skill-badge flex items-center justify-between p-3 bg-white rounded-lg shadow-sm">
+                            <span class="font-medium text-gray-700">Python Scripting</span>
+                            <span class="text-sm text-indigo-600 font-semibold">Intermediate</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <!-- @END_COMPONENT: Skills Section -->
+
+    <!-- @COMPONENT: Certifications Section -->
+    <section id="certifications" class="py-20 bg-gray-50">
+        <div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center mb-16">
+                <h2 class="text-4xl font-bold text-navy-800 mb-4">Professional Certifications</h2>
+                <div class="w-24 h-1 bg-gradient-to-r from-blue-500 to-indigo-600 mx-auto rounded-full"></div>
+                <p class="text-lg text-gray-600 mt-6 max-w-3xl mx-auto">
+                    Industry-recognized certifications demonstrating expertise across cloud platforms, data analytics, and enterprise development.
+                </p>
+            </div>
+            
+            <div class="grid md:grid-cols-2 gap-8">
+                <!-- AWS Certification -->
+                <div class="card-hover bg-white rounded-2xl shadow-lg p-8 border-l-4 border-orange-500">
+                    <div class="flex items-start space-x-4">
+                        <div class="w-16 h-16 bg-orange-100 rounded-lg flex items-center justify-center flex-shrink-0">
+                            <i class="fab fa-aws text-2xl text-orange-600"></i>
+                        </div>
+                        <div class="flex-1">
+                            <h3 class="text-xl font-bold text-navy-800 mb-2">AWS Cloud Practitioner</h3>
+                            <p class="text-orange-600 font-semibold mb-2">Amazon Web Services</p>
+                            <p class="text-gray-600 mb-4">Foundational understanding of AWS Cloud, core services, security, architecture, pricing, and support capabilities.</p>
+                            <div class="flex items-center text-sm text-gray-500">
+                                <i class="fas fa-certificate mr-2"></i>
+                                <span>Industry Standard Certification</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- Azure Certification -->
+                <div class="card-hover bg-white rounded-2xl shadow-lg p-8 border-l-4 border-blue-500">
+                    <div class="flex items-start space-x-4">
+                        <div class="w-16 h-16 bg-blue-100 rounded-lg flex items-center justify-center flex-shrink-0">
+                            <i class="fab fa-microsoft text-2xl text-blue-600"></i>
+                        </div>
+                        <div class="flex-1">
+                            <h3 class="text-xl font-bold text-navy-800 mb-2">Microsoft Azure Fundamentals (AZ-900)</h3>
+                            <p class="text-blue-600 font-semibold mb-2">Microsoft Corporation</p>
+                            <p class="text-gray-600 mb-4">Comprehensive knowledge of Azure cloud services, core solutions, management tools, security, and compliance features.</p>
+                            <div class="flex items-center text-sm text-gray-500">
+                                <i class="fas fa-certificate mr-2"></i>
+                                <span>Microsoft Official Certification</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- Power BI Certification -->
+                <div class="card-hover bg-white rounded-2xl shadow-lg p-8 border-l-4 border-yellow-500">
+                    <div class="flex items-start space-x-4">
+                        <div class="w-16 h-16 bg-yellow-100 rounded-lg flex items-center justify-center flex-shrink-0">
+                            <i class="fas fa-chart-bar text-2xl text-yellow-600"></i>
+                        </div>
+                        <div class="flex-1">
+                            <h3 class="text-xl font-bold text-navy-800 mb-2">Power BI Data Analyst Associate</h3>
+                            <p class="text-yellow-600 font-semibold mb-2">Microsoft Corporation</p>
+                            <p class="text-gray-600 mb-4">Advanced skills in data modeling, visualization, and analytics using Microsoft Power BI for business intelligence solutions.</p>
+                            <div class="flex items-center text-sm text-gray-500">
+                                <i class="fas fa-certificate mr-2"></i>
+                                <span>Associate Level Certification</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- Mendix Certification -->
+                <div class="card-hover bg-white rounded-2xl shadow-lg p-8 border-l-4 border-green-500">
+                    <div class="flex items-start space-x-4">
+                        <div class="w-16 h-16 bg-green-100 rounded-lg flex items-center justify-center flex-shrink-0">
+                            <i class="fas fa-code text-2xl text-green-600"></i>
+                        </div>
+                        <div class="flex-1">
+                            <h3 class="text-xl font-bold text-navy-800 mb-2">Mendix Intermediate Developer</h3>
+                            <p class="text-green-600 font-semibold mb-2">Mendix Inc.</p>
+                            <p class="text-gray-600 mb-4">Proficiency in low-code application development, data modeling, and integration using the Mendix platform for enterprise solutions.</p>
+                            <div class="flex items-center text-sm text-gray-500">
+                                <i class="fas fa-certificate mr-2"></i>
+                                <span>Intermediate Developer Level</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            
+            <!-- Certification Stats -->
+            <div class="mt-16 grid grid-cols-2 md:grid-cols-4 gap-8">
+                <div class="text-center">
+                    <div class="text-3xl font-bold text-blue-600 mb-2">2</div>
+                    <div class="text-gray-600 font-medium">Cloud Platform Certifications</div>
+                </div>
+                <div class="text-center">
+                    <div class="text-3xl font-bold text-emerald-600 mb-2">1</div>
+                    <div class="text-gray-600 font-medium">Data Analytics Certification</div>
+                </div>
+                <div class="text-center">
+                    <div class="text-3xl font-bold text-purple-600 mb-2">1</div>
+                    <div class="text-gray-600 font-medium">Development Platform</div>
+                </div>
+                <div class="text-center">
+                    <div class="text-3xl font-bold text-orange-600 mb-2">100%</div>
+                    <div class="text-gray-600 font-medium">Industry Recognition</div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <!-- @END_COMPONENT: Certifications Section -->
+
+    <!-- @COMPONENT: Contact Section -->
+    <section id="contact" class="py-20 bg-white">
+        <div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center mb-16">
+                <h2 class="text-4xl font-bold text-navy-800 mb-4">Let's Connect</h2>
+                <div class="w-24 h-1 bg-gradient-to-r from-blue-500 to-indigo-600 mx-auto rounded-full"></div>
+                <p class="text-lg text-gray-600 mt-6 max-w-3xl mx-auto">
+                    Ready to discuss your next cloud infrastructure project or explore collaboration opportunities? I'd love to hear from you.
+                </p>
+            </div>
+            
+            <div class="grid lg:grid-cols-2 gap-12">
+                <!-- Contact Information -->
+                <div class="space-y-8">
+                    <div class="bg-gradient-to-br from-blue-50 to-indigo-50 p-8 rounded-2xl">
+                        <h3 class="text-2xl font-bold text-navy-800 mb-6">Get In Touch</h3>
+                        
+                        <div class="space-y-6">
+                            <div class="flex items-center space-x-4">
+                                <div class="w-12 h-12 bg-blue-500 rounded-lg flex items-center justify-center">
+                                    <i class="fas fa-envelope text-white"></i>
+                                </div>
+                                <div>
+                                    <div class="font-semibold text-gray-900">Email</div>
+                                    <a href="mailto:abhishek184054@gmail.com" class="text-blue-600 hover:text-blue-700 transition-colors">
+                                        abhishek184054@gmail.com
+                                    </a>
+                                </div>
+                            </div>
+                            
+                            <div class="flex items-center space-x-4">
+                                <div class="w-12 h-12 bg-blue-600 rounded-lg flex items-center justify-center">
+                                    <i class="fab fa-linkedin text-white"></i>
+                                </div>
+                                <div>
+                                    <div class="font-semibold text-gray-900">LinkedIn</div>
+                                    <a href="https://linkedin.com/in/abhishek-chauhan-429554206" target="_blank" class="text-blue-600 hover:text-blue-700 transition-colors">
+                                        linkedin.com/in/abhishek-chauhan-429554206
+                                    </a>
+                                </div>
+                            </div>
+                            
+                            <div class="flex items-center space-x-4">
+                                <div class="w-12 h-12 bg-emerald-500 rounded-lg flex items-center justify-center">
+                                    <i class="fas fa-phone text-white"></i>
+                                </div>
+                                <div>
+                                    <div class="font-semibold text-gray-900">Phone</div>
+                                    <a href="tel:+918091753343" class="text-blue-600 hover:text-blue-700 transition-colors">
+                                        +91-8091753343
+                                    </a>
+                                </div>
+                            </div>
+                            
+                            <div class="flex items-center space-x-4">
+                                <div class="w-12 h-12 bg-gray-600 rounded-lg flex items-center justify-center">
+                                    <i class="fas fa-map-marker-alt text-white"></i>
+                                </div>
+                                <div>
+                                    <div class="font-semibold text-gray-900">Location</div>
+                                    <div class="text-gray-600">India</div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <!-- Social Links -->
+                    <div class="bg-gradient-to-br from-gray-50 to-gray-100 p-8 rounded-2xl">
+                        <h3 class="text-xl font-bold text-navy-800 mb-4">Follow Me</h3>
+                        <div class="flex space-x-4">
+                            <a href="https://linkedin.com/in/abhishek-chauhan-429554206" target="_blank" class="w-12 h-12 bg-blue-600 hover:bg-blue-700 rounded-lg flex items-center justify-center transition-colors">
+                                <i class="fab fa-linkedin text-white"></i>
+                            </a>
+                            <a href="https://github.com" target="_blank" class="w-12 h-12 bg-gray-800 hover:bg-gray-900 rounded-lg flex items-center justify-center transition-colors">
+                                <i class="fab fa-github text-white"></i>
+                            </a>
+                            <a href="https://twitter.com" target="_blank" class="w-12 h-12 bg-blue-400 hover:bg-blue-500 rounded-lg flex items-center justify-center transition-colors">
+                                <i class="fab fa-twitter text-white"></i>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- Contact Form -->
+                <div class="bg-gray-50 p-8 rounded-2xl">
+                    <h3 class="text-2xl font-bold text-navy-800 mb-6">Send a Message</h3>
+                    
+                    <form class="space-y-6" data-mock="true">
+                        <!-- TODO: Implement form submission logic -->
+                        <div>
+                            <label for="name" class="block text-sm font-medium text-gray-700 mb-2">Full Name</label>
+                            <input type="text" id="name" name="name" placeholder="Your name" class="w-full px-4 py-3 bg-white border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-blue-500 transition-colors">
+                        </div>
+                        
+                        <div>
+                            <label for="email" class="block text-sm font-medium text-gray-700 mb-2">Email Address</label>
+                            <input type="email" id="email" name="email" placeholder="your.email@example.com" class="w-full px-4 py-3 bg-white border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-blue-500 transition-colors">
+                        </div>
+                        
+                        <div>
+                            <label for="subject" class="block text-sm font-medium text-gray-700 mb-2">Subject</label>
+                            <input type="text" id="subject" name="subject" placeholder="What's this about?" class="w-full px-4 py-3 bg-white border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-blue-500 transition-colors">
+                        </div>
+                        
+                        <div>
+                            <label for="message" class="block text-sm font-medium text-gray-700 mb-2">Message</label>
+                            <textarea id="message" name="message" rows="5" placeholder="Tell me about your project or how I can help..." class="w-full px-4 py-3 bg-white border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-blue-500 transition-colors resize-none"></textarea>
+                        </div>
+                        
+                        <button type="submit" class="w-full bg-blue-600 hover:bg-blue-700 text-white font-semibold py-3 px-6 rounded-lg transition-colors duration-200 shadow-lg hover:shadow-xl">
+                            <i class="fas fa-paper-plane mr-2"></i>Send Message
+                        </button>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </section>
+    <!-- @END_COMPONENT: Contact Section -->
+
+    <!-- @COMPONENT: Footer -->
+    <footer class="bg-navy-800 text-white py-12">
+        <div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="grid md:grid-cols-3 gap-8">
+                <div>
+                    <h3 class="text-xl font-bold mb-4">Abhishek Chauhan</h3>
+                    <p class="text-gray-300 mb-4">Cloud & DevOps Engineer specializing in secure, scalable infrastructure solutions and healthcare IT integration.</p>
+                    <div class="flex space-x-4">
+                        <a href="https://linkedin.com/in/abhishek-chauhan-429554206" target="_blank" class="text-gray-300 hover:text-white transition-colors">
+                            <i class="fab fa-linkedin text-xl"></i>
+                        </a>
+                        <a href="https://github.com" target="_blank" class="text-gray-300 hover:text-white transition-colors">
+                            <i class="fab fa-github text-xl"></i>
+                        </a>
+                        <a href="mailto:abhishek184054@gmail.com" class="text-gray-300 hover:text-white transition-colors">
+                            <i class="fas fa-envelope text-xl"></i>
+                        </a>
+                    </div>
+                </div>
+                
+                <div>
+                    <h4 class="text-lg font-semibold mb-4">Quick Links</h4>
+                    <ul class="space-y-2">
+                        <li><a href="#about" class="text-gray-300 hover:text-white transition-colors">About</a></li>
+                        <li><a href="#experience" class="text-gray-300 hover:text-white transition-colors">Experience</a></li>
+                        <li><a href="#skills" class="text-gray-300 hover:text-white transition-colors">Skills</a></li>
+                        <li><a href="#certifications" class="text-gray-300 hover:text-white transition-colors">Certifications</a></li>
+                        <li><a href="#contact" class="text-gray-300 hover:text-white transition-colors">Contact</a></li>
+                    </ul>
+                </div>
+                
+                <div>
+                    <h4 class="text-lg font-semibold mb-4">Expertise Areas</h4>
+                    <ul class="space-y-2 text-gray-300">
+                        <li>Cloud Infrastructure (AWS, Azure)</li>
+                        <li>DevOps & CI/CD Automation</li>
+                        <li>Healthcare IT Integration</li>
+                        <li>Infrastructure as Code</li>
+                        <li>Security & Compliance</li>
+                    </ul>
+                </div>
+            </div>
+            
+            <div class="border-t border-gray-700 mt-8 pt-8 text-center">
+                <p class="text-gray-300">
+                    &copy; 2025 Abhishek Chauhan. All rights reserved. Built with passion for cloud technology and healthcare innovation.
+                </p>
+            </div>
+        </div>
+    </footer>
+    <!-- @END_COMPONENT: Footer -->
+
+    <script>
+        (function() {
+            // Mobile menu toggle
+            const mobileMenuBtn = document.querySelector('.mobile-menu-btn');
+            const mobileMenu = document.querySelector('.mobile-menu');
+            
+            if (mobileMenuBtn && mobileMenu) {
+                mobileMenuBtn.addEventListener('click', function() {
+                    mobileMenu.classList.toggle('hidden');
+                });
+            }
+            
+            // Close mobile menu when clicking on a link
+            const mobileNavLinks = document.querySelectorAll('.mobile-nav-link');
+            mobileNavLinks.forEach(link => {
+                link.addEventListener('click', function() {
+                    mobileMenu.classList.add('hidden');
+                });
+            });
+            
+            // Smooth scrolling and active nav highlighting
+            const navLinks = document.querySelectorAll('.nav-link, .mobile-nav-link');
+            const sections = document.querySelectorAll('section[id]');
+            
+            // Add smooth scrolling to nav links
+            navLinks.forEach(link => {
+                link.addEventListener('click', function(e) {
+                    e.preventDefault();
+                    const targetId = this.getAttribute('href').substring(1);
+                    const targetSection = document.getElementById(targetId);
+                    
+                    if (targetSection) {
+                        const headerHeight = 80; // Account for fixed header
+                        const targetPosition = targetSection.offsetTop - headerHeight;
+                        
+                        window.scrollTo({
+                            top: targetPosition,
+                            behavior: 'smooth'
+                        });
+                    }
+                });
+            });
+            
+            // Highlight active navigation item on scroll
+            function highlightActiveNav() {
+                let current = '';
+                sections.forEach(section => {
+                    const sectionTop = section.offsetTop - 100;
+                    const sectionBottom = sectionTop + section.offsetHeight;
+                    
+                    if (window.scrollY >= sectionTop && window.scrollY < sectionBottom) {
+                        current = section.getAttribute('id');
+                    }
+                });
+                
+                navLinks.forEach(link => {
+                    link.classList.remove('text-blue-600', 'font-semibold');
+                    link.classList.add('text-gray-700');
+                    
+                    if (link.getAttribute('href') === `#${current}`) {
+                        link.classList.remove('text-gray-700');
+                        link.classList.add('text-blue-600', 'font-semibold');
+                    }
+                });
+            }
+            
+            // Listen for scroll events
+            window.addEventListener('scroll', highlightActiveNav);
+            
+            // Initial call to set active nav on page load
+            highlightActiveNav();
+            
+            // Add scroll animations
+            const observerOptions = {
+                threshold: 0.1,
+                rootMargin: '0px 0px -50px 0px'
+            };
+            
+            const observer = new IntersectionObserver(function(entries) {
+                entries.forEach(entry => {
+                    if (entry.isIntersecting) {
+                        entry.target.style.opacity = '1';
+                        entry.target.style.transform = 'translateY(0)';
+                    }
+                });
+            }, observerOptions);
+            
+            // Observe all cards and sections for animation
+            const animatedElements = document.querySelectorAll('.card-hover, .skill-badge');
+            animatedElements.forEach(el => {
+                el.style.opacity = '0';
+                el.style.transform = 'translateY(20px)';
+                el.style.transition = 'opacity 0.6s ease, transform 0.6s ease';
+                observer.observe(el);
+            });
+            
+            // Form submission handling (mock)
+            const contactForm = document.querySelector('form[data-mock="true"]');
+            if (contactForm) {
+                contactForm.addEventListener('submit', function(e) {
+                    e.preventDefault();
+                    // TODO: Implement actual form submission logic
+                    alert('Thank you for your message! This is a demo form. In a real implementation, this would send your message.');
+                });
+            }
+        })();
+    </script>
+</body>
+</html>

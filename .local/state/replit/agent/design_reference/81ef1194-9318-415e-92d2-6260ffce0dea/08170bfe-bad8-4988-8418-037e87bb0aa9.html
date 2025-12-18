@@ -1,0 +1,663 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Abhishek Chauhan - Cloud & DevOps Engineer</title>
+    <meta name="description" content="Professional portfolio of Abhishek Chauhan - Cloud & DevOps Engineer with 3+ years of experience in AWS, Infrastructure Operations, and Enterprise Solutions">
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/js/all.min.js"></script>
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        navy: '#1e3a8a',
+                        charcoal: '#374151',
+                        silver: '#9ca3af',
+                        'navy-light': '#3b82f6',
+                        'navy-dark': '#1e40af'
+                    },
+                    fontFamily: {
+                        'inter': ['Inter', 'system-ui', 'sans-serif']
+                    },
+                    animation: {
+                        'fade-in': 'fadeIn 0.6s ease-in-out',
+                        'slide-up': 'slideUp 0.8s ease-out',
+                        'bounce-subtle': 'bounceSubtle 2s infinite'
+                    }
+                }
+            }
+        };
+    </script>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <style>
+        @keyframes fadeIn {
+            from { opacity: 0; }
+            to { opacity: 1; }
+        }
+        @keyframes slideUp {
+            from { transform: translateY(30px); opacity: 0; }
+            to { transform: translateY(0); opacity: 1; }
+        }
+        @keyframes bounceSubtle {
+            0%, 20%, 50%, 80%, 100% { transform: translateY(0); }
+            40% { transform: translateY(-5px); }
+            60% { transform: translateY(-3px); }
+        }
+        html { scroll-behavior: smooth; }
+        .skill-card:hover { transform: translateY(-2px); }
+        .nav-link.active { color: #1e3a8a; border-bottom: 2px solid #1e3a8a; }
+    </style>
+</head>
+<body class="font-inter bg-white text-charcoal">
+    <!-- @COMPONENT: Header [sticky navigation with professional branding] -->
+    <header class="fixed top-0 left-0 right-0 bg-white/95 backdrop-blur-md shadow-lg z-50 border-b border-gray-100">
+        <nav class="container mx-auto px-6 py-4">
+            <div class="flex items-center justify-between">
+                <div class="text-2xl font-bold text-navy">
+                    Abhishek Chauhan
+                </div>
+                <div class="hidden md:flex space-x-8">
+                    <a href="#home" class="nav-link text-charcoal hover:text-navy transition-colors duration-300 pb-1 active">Home</a>
+                    <a href="#about" class="nav-link text-charcoal hover:text-navy transition-colors duration-300 pb-1">About</a>
+                    <a href="#experience" class="nav-link text-charcoal hover:text-navy transition-colors duration-300 pb-1">Experience</a>
+                    <a href="#skills" class="nav-link text-charcoal hover:text-navy transition-colors duration-300 pb-1">Skills</a>
+                    <a href="#certifications" class="nav-link text-charcoal hover:text-navy transition-colors duration-300 pb-1">Certifications</a>
+                    <a href="#contact" class="nav-link text-charcoal hover:text-navy transition-colors duration-300 pb-1">Contact</a>
+                </div>
+                <button class="md:hidden text-charcoal hover:text-navy" data-event="click:toggleMobileMenu">
+                    <i class="fas fa-bars text-xl"></i>
+                </button>
+            </div>
+            <!-- Mobile Navigation -->
+            <div class="md:hidden hidden mt-4 pb-4 border-t border-gray-100" id="mobile-menu">
+                <div class="flex flex-col space-y-3 pt-4">
+                    <a href="#home" class="text-charcoal hover:text-navy transition-colors duration-300">Home</a>
+                    <a href="#about" class="text-charcoal hover:text-navy transition-colors duration-300">About</a>
+                    <a href="#experience" class="text-charcoal hover:text-navy transition-colors duration-300">Experience</a>
+                    <a href="#skills" class="text-charcoal hover:text-navy transition-colors duration-300">Skills</a>
+                    <a href="#certifications" class="text-charcoal hover:text-navy transition-colors duration-300">Certifications</a>
+                    <a href="#contact" class="text-charcoal hover:text-navy transition-colors duration-300">Contact</a>
+                </div>
+            </div>
+        </nav>
+    </header>
+    <!-- @END_COMPONENT: Header -->
+
+    <main>
+        <!-- @COMPONENT: Hero Section [animated hero with professional tagline] -->
+        <section id="home" class="min-h-screen flex items-center justify-center bg-gradient-to-br from-navy via-navy-light to-navy-dark relative overflow-hidden">
+            <div class="absolute inset-0 bg-black/20"></div>
+            <div class="container mx-auto px-6 text-center relative z-10">
+                <div class="animate-fade-in">
+                    <h1 class="text-5xl md:text-7xl font-bold text-white mb-6 leading-tight">
+                        <span class="block">Cloud & DevOps</span>
+                        <span class="block text-blue-200">Engineer</span>
+                    </h1>
+                    <p class="text-xl md:text-2xl text-blue-100 mb-8 max-w-3xl mx-auto font-light">
+                        3+ years of experience in AWS, Cloud Infrastructure, and DevOps Operations
+                    </p>
+                    <div class="flex flex-col sm:flex-row gap-4 justify-center items-center">
+                        <a href="#about" class="bg-white text-navy px-8 py-4 rounded-lg font-semibold hover:bg-blue-50 transition-all duration-300 transform hover:scale-105 shadow-lg">
+                            View My Work
+                        </a>
+                        <a href="#" class="border-2 border-white text-white px-8 py-4 rounded-lg font-semibold hover:bg-white hover:text-navy transition-all duration-300 transform hover:scale-105" data-implementation="Should trigger resume download">
+                            <i class="fas fa-download mr-2"></i>Download Resume
+                        </a>
+                    </div>
+                </div>
+            </div>
+            <div class="absolute bottom-8 left-1/2 transform -translate-x-1/2 text-white animate-bounce-subtle">
+                <i class="fas fa-chevron-down text-2xl"></i>
+            </div>
+        </section>
+        <!-- @END_COMPONENT: Hero Section -->
+
+        <!-- @COMPONENT: About Section [professional summary with expertise focus] -->
+        <section id="about" class="py-20 bg-gray-50">
+            <div class="container mx-auto px-6">
+                <div class="max-w-4xl mx-auto">
+                    <div class="text-center mb-16 animate-slide-up">
+                        <h2 class="text-4xl md:text-5xl font-bold text-navy mb-6">About Me</h2>
+                        <div class="w-24 h-1 bg-navy mx-auto mb-8"></div>
+                    </div>
+                    <div class="bg-white rounded-2xl shadow-xl p-8 md:p-12 animate-slide-up">
+                        <div class="grid md:grid-cols-2 gap-12 items-center">
+                            <div>
+                                <h3 class="text-2xl font-bold text-navy mb-6">Professional Summary</h3>
+                                <p class="text-lg text-charcoal leading-relaxed mb-6">
+                                    Cloud and DevOps Engineer skilled in AWS, Terraform, Docker, Kubernetes, CI/CD, Linux, and enterprise infrastructure solutions. Certified in AWS & Azure, passionate about secure and scalable cloud architecture.
+                                </p>
+                                <p class="text-lg text-charcoal leading-relaxed">
+                                    I specialize in building robust cloud infrastructure, automating deployment pipelines, and implementing enterprise-level monitoring solutions that drive business success.
+                                </p>
+                            </div>
+                            <div class="bg-gradient-to-br from-navy to-navy-light rounded-xl p-8 text-white">
+                                <h4 class="text-xl font-bold mb-6">Key Expertise</h4>
+                                <div class="space-y-4">
+                                    <div class="flex items-center">
+                                        <i class="fas fa-cloud text-blue-200 mr-3"></i>
+                                        <span>Cloud Architecture & Migration</span>
+                                    </div>
+                                    <div class="flex items-center">
+                                        <i class="fas fa-cogs text-blue-200 mr-3"></i>
+                                        <span>Infrastructure Automation</span>
+                                    </div>
+                                    <div class="flex items-center">
+                                        <i class="fas fa-rocket text-blue-200 mr-3"></i>
+                                        <span>CI/CD Pipeline Development</span>
+                                    </div>
+                                    <div class="flex items-center">
+                                        <i class="fas fa-shield-alt text-blue-200 mr-3"></i>
+                                        <span>Security & Compliance</span>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <!-- @END_COMPONENT: About Section -->
+
+        <!-- @COMPONENT: Experience Section [detailed work history with achievements] -->
+        <section id="experience" class="py-20 bg-white">
+            <div class="container mx-auto px-6">
+                <div class="text-center mb-16">
+                    <h2 class="text-4xl md:text-5xl font-bold text-navy mb-6">Professional Experience</h2>
+                    <div class="w-24 h-1 bg-navy mx-auto mb-8"></div>
+                </div>
+                <div class="max-w-4xl mx-auto space-y-8">
+                    <!-- @MAP: experienceItems.map(item => ( -->
+                    <div class="bg-white rounded-2xl shadow-xl border border-gray-100 overflow-hidden hover:shadow-2xl transition-all duration-300">
+                        <div class="p-8 md:p-10">
+                            <div class="flex flex-col md:flex-row md:items-center md:justify-between mb-6">
+                                <div>
+                                    <h3 class="text-2xl font-bold text-navy mb-2">Cloud & DevOps Engineer</h3>
+                                    <p class="text-xl text-silver font-semibold">Feedback Medical</p>
+                                </div>
+                                <div class="bg-navy text-white px-4 py-2 rounded-lg text-sm font-semibold mt-4 md:mt-0">
+                                    Jan 2025 – Present
+                                </div>
+                            </div>
+                            <div class="space-y-3 text-charcoal">
+                                <div class="flex items-start">
+                                    <i class="fas fa-check-circle text-navy mt-1 mr-3 flex-shrink-0"></i>
+                                    <p>Deployed and configured cloud-native applications on AWS with focus on scalability and performance optimization</p>
+                                </div>
+                                <div class="flex items-start">
+                                    <i class="fas fa-check-circle text-navy mt-1 mr-3 flex-shrink-0"></i>
+                                    <p>Automated infrastructure provisioning and management using Terraform and Jenkins for enhanced operational efficiency</p>
+                                </div>
+                                <div class="flex items-start">
+                                    <i class="fas fa-check-circle text-navy mt-1 mr-3 flex-shrink-0"></i>
+                                    <p>Implemented comprehensive security frameworks and supported enterprise IT infrastructure teams</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="bg-white rounded-2xl shadow-xl border border-gray-100 overflow-hidden hover:shadow-2xl transition-all duration-300">
+                        <div class="p-8 md:p-10">
+                            <div class="flex flex-col md:flex-row md:items-center md:justify-between mb-6">
+                                <div>
+                                    <h3 class="text-2xl font-bold text-navy mb-2">Software Developer & DevOps Engineer</h3>
+                                    <p class="text-xl text-silver font-semibold">Cognizant Technology Solutions</p>
+                                </div>
+                                <div class="bg-charcoal text-white px-4 py-2 rounded-lg text-sm font-semibold mt-4 md:mt-0">
+                                    Jul 2022 – Sept 2024
+                                </div>
+                            </div>
+                            <div class="space-y-3 text-charcoal">
+                                <div class="flex items-start">
+                                    <i class="fas fa-check-circle text-navy mt-1 mr-3 flex-shrink-0"></i>
+                                    <p>Developed and maintained scalable APIs using Java Spring Boot for enterprise applications</p>
+                                </div>
+                                <div class="flex items-start">
+                                    <i class="fas fa-check-circle text-navy mt-1 mr-3 flex-shrink-0"></i>
+                                    <p>Automated AWS infrastructure deployment and management using Terraform and Infrastructure as Code principles</p>
+                                </div>
+                                <div class="flex items-start">
+                                    <i class="fas fa-check-circle text-navy mt-1 mr-3 flex-shrink-0"></i>
+                                    <p>Built and optimized CI/CD pipelines using Jenkins, reducing deployment time by 60% and improving code quality</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- @END_MAP )) -->
+                </div>
+            </div>
+        </section>
+        <!-- @END_COMPONENT: Experience Section -->
+
+        <!-- @COMPONENT: Skills Section [categorized technical expertise with enterprise focus] -->
+        <section id="skills" class="py-20 bg-gray-50">
+            <div class="container mx-auto px-6">
+                <div class="text-center mb-16">
+                    <h2 class="text-4xl md:text-5xl font-bold text-navy mb-6">Technical Expertise</h2>
+                    <div class="w-24 h-1 bg-navy mx-auto mb-8"></div>
+                    <p class="text-lg text-charcoal max-w-2xl mx-auto">
+                        Enterprise-level technical skills across cloud infrastructure, DevOps automation, and modern development practices
+                    </p>
+                </div>
+                
+                <div class="max-w-6xl mx-auto grid md:grid-cols-2 lg:grid-cols-3 gap-8">
+                    <!-- @MAP: skillCategories.map(category => ( -->
+                    <div class="skill-card bg-white rounded-2xl shadow-lg p-8 border border-gray-100 hover:shadow-xl transition-all duration-300">
+                        <div class="text-center mb-6">
+                            <div class="w-16 h-16 bg-gradient-to-br from-navy to-navy-light rounded-full flex items-center justify-center mx-auto mb-4">
+                                <i class="fas fa-cloud text-white text-2xl"></i>
+                            </div>
+                            <h3 class="text-xl font-bold text-navy">Cloud Infrastructure & Architecture</h3>
+                        </div>
+                        <div class="space-y-3">
+                            <div class="flex justify-between items-center">
+                                <span class="text-charcoal font-medium">AWS</span>
+                                <div class="flex space-x-1">
+                                    <div class="w-2 h-2 bg-navy rounded-full"></div>
+                                    <div class="w-2 h-2 bg-navy rounded-full"></div>
+                                    <div class="w-2 h-2 bg-navy rounded-full"></div>
+                                    <div class="w-2 h-2 bg-navy rounded-full"></div>
+                                    <div class="w-2 h-2 bg-navy rounded-full"></div>
+                                </div>
+                            </div>
+                            <div class="flex justify-between items-center">
+                                <span class="text-charcoal font-medium">Azure</span>
+                                <div class="flex space-x-1">
+                                    <div class="w-2 h-2 bg-navy rounded-full"></div>
+                                    <div class="w-2 h-2 bg-navy rounded-full"></div>
+                                    <div class="w-2 h-2 bg-navy rounded-full"></div>
+                                    <div class="w-2 h-2 bg-navy rounded-full"></div>
+                                    <div class="w-2 h-2 bg-gray-300 rounded-full"></div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="skill-card bg-white rounded-2xl shadow-lg p-8 border border-gray-100 hover:shadow-xl transition-all duration-300">
+                        <div class="text-center mb-6">
+                            <div class="w-16 h-16 bg-gradient-to-br from-navy to-navy-light rounded-full flex items-center justify-center mx-auto mb-4">
+                                <i class="fas fa-cogs text-white text-2xl"></i>
+                            </div>
+                            <h3 class="text-xl font-bold text-navy">DevOps & CI/CD Pipelines</h3>
+                        </div>
+                        <div class="space-y-2 text-charcoal">
+                            <div class="flex items-center">
+                                <i class="fas fa-check text-navy mr-2"></i>
+                                <span>Terraform</span>
+                            </div>
+                            <div class="flex items-center">
+                                <i class="fas fa-check text-navy mr-2"></i>
+                                <span>Docker & Kubernetes</span>
+                            </div>
+                            <div class="flex items-center">
+                                <i class="fas fa-check text-navy mr-2"></i>
+                                <span>Jenkins</span>
+                            </div>
+                            <div class="flex items-center">
+                                <i class="fas fa-check text-navy mr-2"></i>
+                                <span>GitHub Actions</span>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="skill-card bg-white rounded-2xl shadow-lg p-8 border border-gray-100 hover:shadow-xl transition-all duration-300">
+                        <div class="text-center mb-6">
+                            <div class="w-16 h-16 bg-gradient-to-br from-navy to-navy-light rounded-full flex items-center justify-center mx-auto mb-4">
+                                <i class="fas fa-code text-white text-2xl"></i>
+                            </div>
+                            <h3 class="text-xl font-bold text-navy">Infrastructure as Code & Automation</h3>
+                        </div>
+                        <div class="space-y-2 text-charcoal">
+                            <div class="flex items-center">
+                                <i class="fas fa-check text-navy mr-2"></i>
+                                <span>Advanced Terraform</span>
+                            </div>
+                            <div class="flex items-center">
+                                <i class="fas fa-check text-navy mr-2"></i>
+                                <span>Kubernetes Orchestration</span>
+                            </div>
+                            <div class="flex items-center">
+                                <i class="fas fa-check text-navy mr-2"></i>
+                                <span>Python Scripting</span>
+                            </div>
+                            <div class="flex items-center">
+                                <i class="fas fa-check text-navy mr-2"></i>
+                                <span>Linux Administration</span>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="skill-card bg-white rounded-2xl shadow-lg p-8 border border-gray-100 hover:shadow-xl transition-all duration-300">
+                        <div class="text-center mb-6">
+                            <div class="w-16 h-16 bg-gradient-to-br from-navy to-navy-light rounded-full flex items-center justify-center mx-auto mb-4">
+                                <i class="fas fa-chart-line text-white text-2xl"></i>
+                            </div>
+                            <h3 class="text-xl font-bold text-navy">Monitoring & Observability</h3>
+                        </div>
+                        <div class="space-y-2 text-charcoal">
+                            <div class="flex items-center">
+                                <i class="fas fa-check text-navy mr-2"></i>
+                                <span>Prometheus & Grafana</span>
+                            </div>
+                            <div class="flex items-center">
+                                <i class="fas fa-check text-navy mr-2"></i>
+                                <span>ELK Stack</span>
+                            </div>
+                            <div class="flex items-center">
+                                <i class="fas fa-check text-navy mr-2"></i>
+                                <span>Application Performance Monitoring</span>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="skill-card bg-white rounded-2xl shadow-lg p-8 border border-gray-100 hover:shadow-xl transition-all duration-300">
+                        <div class="text-center mb-6">
+                            <div class="w-16 h-16 bg-gradient-to-br from-navy to-navy-light rounded-full flex items-center justify-center mx-auto mb-4">
+                                <i class="fas fa-shield-alt text-white text-2xl"></i>
+                            </div>
+                            <h3 class="text-xl font-bold text-navy">Security & Compliance</h3>
+                        </div>
+                        <div class="space-y-2 text-charcoal">
+                            <div class="flex items-center">
+                                <i class="fas fa-check text-navy mr-2"></i>
+                                <span>Enterprise Security Frameworks</span>
+                            </div>
+                            <div class="flex items-center">
+                                <i class="fas fa-check text-navy mr-2"></i>
+                                <span>IAM & Access Management</span>
+                            </div>
+                            <div class="flex items-center">
+                                <i class="fas fa-check text-navy mr-2"></i>
+                                <span>Compliance Automation</span>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="skill-card bg-white rounded-2xl shadow-lg p-8 border border-gray-100 hover:shadow-xl transition-all duration-300">
+                        <div class="text-center mb-6">
+                            <div class="w-16 h-16 bg-gradient-to-br from-navy to-navy-light rounded-full flex items-center justify-center mx-auto mb-4">
+                                <i class="fas fa-database text-white text-2xl"></i>
+                            </div>
+                            <h3 class="text-xl font-bold text-navy">Databases & Middleware</h3>
+                        </div>
+                        <div class="space-y-2 text-charcoal">
+                            <div class="flex items-center">
+                                <i class="fas fa-check text-navy mr-2"></i>
+                                <span>MySQL, MongoDB, Redis</span>
+                            </div>
+                            <div class="flex items-center">
+                                <i class="fas fa-check text-navy mr-2"></i>
+                                <span>Nginx, Apache, HAProxy</span>
+                            </div>
+                            <div class="flex items-center">
+                                <i class="fas fa-check text-navy mr-2"></i>
+                                <span>RabbitMQ</span>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- @END_MAP )) -->
+                </div>
+            </div>
+        </section>
+        <!-- @END_COMPONENT: Skills Section -->
+
+        <!-- @COMPONENT: Certifications Section [professional certifications showcase] -->
+        <section id="certifications" class="py-20 bg-white">
+            <div class="container mx-auto px-6">
+                <div class="text-center mb-16">
+                    <h2 class="text-4xl md:text-5xl font-bold text-navy mb-6">Professional Certifications</h2>
+                    <div class="w-24 h-1 bg-navy mx-auto mb-8"></div>
+                    <p class="text-lg text-charcoal max-w-2xl mx-auto">
+                        Industry-recognized certifications demonstrating expertise in cloud technologies and enterprise solutions
+                    </p>
+                </div>
+                
+                <div class="max-w-4xl mx-auto grid md:grid-cols-2 gap-8">
+                    <!-- @MAP: certifications.map(cert => ( -->
+                    <div class="bg-gradient-to-br from-navy to-navy-light rounded-2xl p-8 text-white shadow-xl hover:shadow-2xl transition-all duration-300 transform hover:scale-105">
+                        <div class="flex items-center mb-4">
+                            <div class="w-12 h-12 bg-white/20 rounded-lg flex items-center justify-center mr-4">
+                                <i class="fas fa-aws text-2xl"></i>
+                            </div>
+                            <div>
+                                <h3 class="text-xl font-bold">AWS Cloud Practitioner</h3>
+                                <p class="text-blue-200">Amazon Web Services</p>
+                            </div>
+                        </div>
+                        <p class="text-blue-100">
+                            Foundational understanding of AWS Cloud concepts, services, and terminology
+                        </p>
+                    </div>
+
+                    <div class="bg-gradient-to-br from-blue-600 to-blue-800 rounded-2xl p-8 text-white shadow-xl hover:shadow-2xl transition-all duration-300 transform hover:scale-105">
+                        <div class="flex items-center mb-4">
+                            <div class="w-12 h-12 bg-white/20 rounded-lg flex items-center justify-center mr-4">
+                                <i class="fab fa-microsoft text-2xl"></i>
+                            </div>
+                            <div>
+                                <h3 class="text-xl font-bold">Azure Fundamentals (AZ-900)</h3>
+                                <p class="text-blue-200">Microsoft Azure</p>
+                            </div>
+                        </div>
+                        <p class="text-blue-100">
+                            Core Azure services, workloads, security, and governance
+                        </p>
+                    </div>
+
+                    <div class="bg-gradient-to-br from-yellow-500 to-orange-600 rounded-2xl p-8 text-white shadow-xl hover:shadow-2xl transition-all duration-300 transform hover:scale-105">
+                        <div class="flex items-center mb-4">
+                            <div class="w-12 h-12 bg-white/20 rounded-lg flex items-center justify-center mr-4">
+                                <i class="fas fa-chart-bar text-2xl"></i>
+                            </div>
+                            <div>
+                                <h3 class="text-xl font-bold">Power BI Data Analyst Associate</h3>
+                                <p class="text-orange-200">Microsoft</p>
+                            </div>
+                        </div>
+                        <p class="text-orange-100">
+                            Advanced data visualization and business intelligence solutions
+                        </p>
+                    </div>
+
+                    <div class="bg-gradient-to-br from-green-600 to-teal-700 rounded-2xl p-8 text-white shadow-xl hover:shadow-2xl transition-all duration-300 transform hover:scale-105">
+                        <div class="flex items-center mb-4">
+                            <div class="w-12 h-12 bg-white/20 rounded-lg flex items-center justify-center mr-4">
+                                <i class="fas fa-code text-2xl"></i>
+                            </div>
+                            <div>
+                                <h3 class="text-xl font-bold">Mendix Intermediate Developer</h3>
+                                <p class="text-green-200">Mendix</p>
+                            </div>
+                        </div>
+                        <p class="text-green-100">
+                            Low-code application development and enterprise solutions
+                        </p>
+                    </div>
+                    <!-- @END_MAP )) -->
+                </div>
+            </div>
+        </section>
+        <!-- @END_COMPONENT: Certifications Section -->
+
+        <!-- @COMPONENT: Contact Section [professional contact information and form] -->
+        <section id="contact" class="py-20 bg-gray-50">
+            <div class="container mx-auto px-6">
+                <div class="text-center mb-16">
+                    <h2 class="text-4xl md:text-5xl font-bold text-navy mb-6">Get In Touch</h2>
+                    <div class="w-24 h-1 bg-navy mx-auto mb-8"></div>
+                    <p class="text-lg text-charcoal max-w-2xl mx-auto">
+                        Ready to discuss cloud infrastructure solutions or DevOps optimization? Let's connect and explore how I can contribute to your team's success.
+                    </p>
+                </div>
+                
+                <div class="max-w-4xl mx-auto">
+                    <div class="grid md:grid-cols-2 gap-12">
+                        <div class="bg-white rounded-2xl shadow-xl p-8">
+                            <h3 class="text-2xl font-bold text-navy mb-8">Contact Information</h3>
+                            <div class="space-y-6">
+                                <div class="flex items-center">
+                                    <div class="w-12 h-12 bg-navy rounded-lg flex items-center justify-center mr-4">
+                                        <i class="fas fa-envelope text-white"></i>
+                                    </div>
+                                    <div>
+                                        <p class="text-sm text-silver">Email</p>
+                                        <a href="mailto:abhishek184054@gmail.com" class="text-lg font-semibold text-charcoal hover:text-navy transition-colors">
+                                            abhishek184054@gmail.com
+                                        </a>
+                                    </div>
+                                </div>
+                                <div class="flex items-center">
+                                    <div class="w-12 h-12 bg-navy rounded-lg flex items-center justify-center mr-4">
+                                        <i class="fab fa-linkedin text-white"></i>
+                                    </div>
+                                    <div>
+                                        <p class="text-sm text-silver">LinkedIn</p>
+                                        <a href="https://linkedin.com/in/abhishek-chauhan-429554206" target="_blank" class="text-lg font-semibold text-charcoal hover:text-navy transition-colors">
+                                            linkedin.com/in/abhishek-chauhan-429554206
+                                        </a>
+                                    </div>
+                                </div>
+                                <div class="flex items-center">
+                                    <div class="w-12 h-12 bg-navy rounded-lg flex items-center justify-center mr-4">
+                                        <i class="fas fa-phone text-white"></i>
+                                    </div>
+                                    <div>
+                                        <p class="text-sm text-silver">Phone</p>
+                                        <a href="tel:+918091753343" class="text-lg font-semibold text-charcoal hover:text-navy transition-colors">
+                                            +91-8091753343
+                                        </a>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        
+                        <div class="bg-white rounded-2xl shadow-xl p-8">
+                            <h3 class="text-2xl font-bold text-navy mb-8">Send a Message</h3>
+                            <form class="space-y-6" data-implementation="Should handle form submission and validation">
+                                <div>
+                                    <label class="block text-sm font-semibold text-charcoal mb-2">Name</label>
+                                    <input type="text" class="w-full px-4 py-3 border border-gray-200 rounded-lg focus:ring-2 focus:ring-navy focus:border-transparent transition-all duration-300" placeholder="Your name" required>
+                                </div>
+                                <div>
+                                    <label class="block text-sm font-semibold text-charcoal mb-2">Email</label>
+                                    <input type="email" class="w-full px-4 py-3 border border-gray-200 rounded-lg focus:ring-2 focus:ring-navy focus:border-transparent transition-all duration-300" placeholder="your.email@company.com" required>
+                                </div>
+                                <div>
+                                    <label class="block text-sm font-semibold text-charcoal mb-2">Message</label>
+                                    <textarea rows="4" class="w-full px-4 py-3 border border-gray-200 rounded-lg focus:ring-2 focus:ring-navy focus:border-transparent transition-all duration-300" placeholder="Tell me about your project or opportunity..." required></textarea>
+                                </div>
+                                <button type="submit" class="w-full bg-navy text-white py-3 px-6 rounded-lg font-semibold hover:bg-navy-dark transition-all duration-300 transform hover:scale-105 shadow-lg">
+                                    <i class="fas fa-paper-plane mr-2"></i>Send Message
+                                </button>
+                            </form>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <!-- @END_COMPONENT: Contact Section -->
+    </main>
+
+    <!-- @COMPONENT: Footer [professional footer with copyright] -->
+    <footer class="bg-navy text-white py-12">
+        <div class="container mx-auto px-6">
+            <div class="flex flex-col md:flex-row justify-between items-center">
+                <div class="mb-6 md:mb-0">
+                    <h3 class="text-2xl font-bold mb-2">Abhishek Chauhan</h3>
+                    <p class="text-blue-200">Cloud & DevOps Engineer</p>
+                </div>
+                <div class="flex space-x-6">
+                    <a href="mailto:abhishek184054@gmail.com" class="hover:text-blue-200 transition-colors duration-300">
+                        <i class="fas fa-envelope text-xl"></i>
+                    </a>
+                    <a href="https://linkedin.com/in/abhishek-chauhan-429554206" target="_blank" class="hover:text-blue-200 transition-colors duration-300">
+                        <i class="fab fa-linkedin text-xl"></i>
+                    </a>
+                    <a href="#" class="hover:text-blue-200 transition-colors duration-300" data-implementation="Should trigger resume download">
+                        <i class="fas fa-download text-xl"></i>
+                    </a>
+                </div>
+            </div>
+            <div class="border-t border-blue-800 mt-8 pt-8 text-center">
+                <p class="text-blue-200">
+                    © 2025 Abhishek Chauhan. All rights reserved. | Designed for professional excellence.
+                </p>
+            </div>
+        </div>
+    </footer>
+    <!-- @END_COMPONENT: Footer -->
+
+    <script>
+        // Navigation functionality
+        (function() {
+            // Mobile menu toggle
+            const mobileMenuButton = document.querySelector('[data-event="click:toggleMobileMenu"]');
+            const mobileMenu = document.getElementById('mobile-menu');
+            
+            if (mobileMenuButton && mobileMenu) {
+                mobileMenuButton.addEventListener('click', function() {
+                    mobileMenu.classList.toggle('hidden');
+                });
+            }
+
+            // Smooth scrolling and active link highlighting
+            const navLinks = document.querySelectorAll('.nav-link');
+            const sections = document.querySelectorAll('section[id]');
+            
+            // Handle navigation clicks
+            navLinks.forEach(link => {
+                link.addEventListener('click', function(e) {
+                    e.preventDefault();
+                    const targetId = this.getAttribute('href').substring(1);
+                    const targetSection = document.getElementById(targetId);
+                    
+                    if (targetSection) {
+                        const headerHeight = 80; // Account for fixed header
+                        const targetPosition = targetSection.getBoundingClientRect().top + window.pageYOffset - headerHeight;
+                        
+                        window.scrollTo({
+                            top: targetPosition,
+                            behavior: 'smooth'
+                        });
+                    }
+                    
+                    // Close mobile menu if open
+                    if (mobileMenu && !mobileMenu.classList.contains('hidden')) {
+                        mobileMenu.classList.add('hidden');
+                    }
+                });
+            });
+            
+            // Update active navigation on scroll
+            function updateActiveNav() {
+                const scrollPosition = window.pageYOffset + 100;
+                
+                sections.forEach(section => {
+                    const sectionTop = section.getBoundingClientRect().top + window.pageYOffset;
+                    const sectionHeight = section.offsetHeight;
+                    const sectionId = section.getAttribute('id');
+                    
+                    if (scrollPosition >= sectionTop && scrollPosition < sectionTop + sectionHeight) {
+                        navLinks.forEach(link => {
+                            link.classList.remove('active');
+                            if (link.getAttribute('href') === `#${sectionId}`) {
+                                link.classList.add('active');
+                            }
+                        });
+                    }
+                });
+            }
+            
+            window.addEventListener('scroll', updateActiveNav);
+            
+            // TODO: Implement business logic for:
+            // - Resume download functionality
+            // - Contact form submission and validation
+            // - Loading states and error handling
+            // - API integrations for contact form
+        })();
+    </script>
+</body>
+</html>

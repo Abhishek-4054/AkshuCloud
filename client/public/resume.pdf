@@ -1,8 +1,0 @@
-This is a placeholder for the resume PDF file. In a real implementation, you would place the actual PDF resume file here. The file should be named exactly "resume.pdf" and placed in the client/public directory so it can be accessed at the URL "/resume.pdf" for download functionality.
-
-To implement this properly:
-1. Create or obtain Abhishek Chauhan's actual resume in PDF format
-2. Save it as "resume.pdf" in the client/public directory
-3. The download functionality in the Hero component will automatically work with this file
-
-The file path would be: client/public/resume.pdf

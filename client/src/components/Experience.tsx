@@ -9,6 +9,50 @@ export default function Experience() {
           <div className="w-24 h-1 bg-primary mx-auto mb-16"></div>
           
           <div className="space-y-12">
+            {/* Raptbot Experience */}
+<div className="bg-white rounded-2xl p-8 shadow-lg hover:shadow-xl transition-shadow duration-300" data-testid="card-experience-raptbot">
+  <div className="flex flex-col lg:flex-row lg:justify-between lg:items-start mb-6">
+    <div className="flex-1">
+      <h3 className="text-2xl font-bold text-gray-900 mb-2" data-testid="text-job-title-raptbot">Software Engineer</h3>
+      <h4 className="text-xl text-primary font-semibold mb-2" data-testid="text-company-raptbot">Raptbot</h4>
+      <p className="text-gray-600 font-medium" data-testid="text-duration-raptbot">Sept 2024 – Present</p>
+    </div>
+    <div className="mt-4 lg:mt-0">
+      <span className="bg-blue-100 text-blue-800 px-3 py-1 rounded-full text-sm font-medium" data-testid="badge-raptbot-duration">Ongoing</span>
+    </div>
+  </div>
+  <ul className="space-y-3 text-gray-700">
+    <li className="flex items-start">
+      <ChevronRight className="text-primary mt-1 mr-3 flex-shrink-0" size={16} />
+      <span>Managed alerting and monitoring systems for 25 client accounts using custom dashboards</span>
+    </li>
+    <li className="flex items-start">
+      <ChevronRight className="text-primary mt-1 mr-3 flex-shrink-0" size={16} />
+      <span>Collaborated with cross-functional teams to ensure rapid response to system anomalies</span>
+    </li>
+    <li className="flex items-start">
+      <ChevronRight className="text-primary mt-1 mr-3 flex-shrink-0" size={16} />
+      <span>Implemented automated escalation paths for critical incidents to improve response time by 40%</span>
+    </li>
+    <li className="flex items-start">
+      <ChevronRight className="text-primary mt-1 mr-3 flex-shrink-0" size={16} />
+      <span>Monitored system performance and resource usage for optimal uptime and performance</span>
+    </li>
+    <li className="flex items-start">
+      <ChevronRight className="text-primary mt-1 mr-3 flex-shrink-0" size={16} />
+      <span>Provided in-depth reports and analytics on alert trends and resolution times to leadership</span>
+    </li>
+    <li className="flex items-start">
+      <ChevronRight className="text-primary mt-1 mr-3 flex-shrink-0" size={16} />
+      <span>Developed and optimized automated workflows to reduce manual monitoring tasks by 60%</span>
+    </li>
+    <li className="flex items-start">
+      <ChevronRight className="text-primary mt-1 mr-3 flex-shrink-0" size={16} />
+      <span>Trained team members on best practices for monitoring tools and alerting mechanisms</span>
+    </li>
+  </ul>
+</div>
+
             {/* Feedback Medical Experience */}
             <div className="bg-white rounded-2xl p-8 shadow-lg hover:shadow-xl transition-shadow duration-300" data-testid="card-experience-feedback">
               <div className="flex flex-col lg:flex-row lg:justify-between lg:items-start mb-6">

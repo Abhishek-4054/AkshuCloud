@@ -1,0 +1,876 @@
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Abhishek Chauhan - Cloud & DevOps Engineer Portfolio</title>
+    <meta name="description" content="Cloud & DevOps Engineer with 3+ years experience in AWS, Terraform, Kubernetes, and Healthcare IT Integration">
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script src="https://unpkg.com/lucide@latest/dist/umd/lucide.js"></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    fontFamily: {
+                        'inter': ['Inter', 'sans-serif'],
+                    },
+                    colors: {
+                        'navy': '#0F172A',
+                        'slate-850': '#0C1427',
+                    },
+                    animation: {
+                        'fade-in': 'fadeIn 0.8s ease-in-out',
+                        'slide-up': 'slideUp 0.6s ease-out',
+                        'float': 'float 3s ease-in-out infinite',
+                    }
+                }
+            }
+        };
+    </script>
+    <style>
+        @keyframes fadeIn {
+            from { opacity: 0; transform: translateY(20px); }
+            to { opacity: 1; transform: translateY(0); }
+        }
+        @keyframes slideUp {
+            from { opacity: 0; transform: translateY(30px); }
+            to { opacity: 1; transform: translateY(0); }
+        }
+        @keyframes float {
+            0%, 100% { transform: translateY(0px); }
+            50% { transform: translateY(-10px); }
+        }
+        .skill-bar {
+            transition: width 2s ease-in-out;
+        }
+        html { scroll-behavior: smooth; }
+    </style>
+</head>
+<body class="font-inter bg-slate-50 text-slate-800">
+
+    <!-- @COMPONENT: Header [sticky navigation with active states] -->
+    <header class="fixed top-0 left-0 right-0 bg-white/95 backdrop-blur-md border-b border-slate-200 z-50 shadow-sm">
+        <nav class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex justify-between items-center h-16">
+                <!-- @COMPONENT: Logo [personal branding] -->
+                <div class="flex-shrink-0">
+                    <div class="text-xl font-bold text-navy bg-gradient-to-r from-blue-600 to-cyan-600 bg-clip-text text-transparent">
+                        AC
+                    </div>
+                </div>
+                
+                <!-- Desktop Navigation -->
+                <div class="hidden md:block">
+                    <div class="ml-10 flex items-baseline space-x-8">
+                        <a href="#home" class="text-navy hover:text-blue-600 px-3 py-2 text-sm font-medium transition-colors duration-200 border-b-2 border-blue-600">Home</a>
+                        <a href="#about" class="text-slate-600 hover:text-blue-600 px-3 py-2 text-sm font-medium transition-colors duration-200">About</a>
+                        <a href="#experience" class="text-slate-600 hover:text-blue-600 px-3 py-2 text-sm font-medium transition-colors duration-200">Experience</a>
+                        <a href="#skills" class="text-slate-600 hover:text-blue-600 px-3 py-2 text-sm font-medium transition-colors duration-200">Skills</a>
+                        <a href="#certifications" class="text-slate-600 hover:text-blue-600 px-3 py-2 text-sm font-medium transition-colors duration-200">Certifications</a>
+                        <a href="#contact" class="text-slate-600 hover:text-blue-600 px-3 py-2 text-sm font-medium transition-colors duration-200">Contact</a>
+                    </div>
+                </div>
+
+                <!-- Mobile menu button -->
+                <div class="md:hidden">
+                    <button type="button" class="text-slate-600 hover:text-blue-600 focus:outline-none" data-implementation="Toggle mobile menu">
+                        <i data-lucide="menu" class="w-6 h-6"></i>
+                    </button>
+                </div>
+            </div>
+        </nav>
+    </header>
+    <!-- @END_COMPONENT: Header -->
+
+    <!-- @COMPONENT: Hero Section [animated introduction with CTA] -->
+    <section id="home" class="relative min-h-screen flex items-center justify-center bg-gradient-to-br from-slate-900 via-navy to-slate-800 overflow-hidden">
+        <!-- Background decoration -->
+        <div class="absolute inset-0 bg-gradient-to-r from-blue-600/10 to-cyan-600/10"></div>
+        <div class="absolute top-20 left-10 w-72 h-72 bg-blue-500/10 rounded-full blur-3xl animate-float"></div>
+        <div class="absolute bottom-20 right-10 w-96 h-96 bg-cyan-500/10 rounded-full blur-3xl animate-float" style="animation-delay: 1s;"></div>
+        
+        <div class="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
+            <div class="animate-fade-in">
+                <!-- Professional headshot placeholder -->
+                <div class="w-32 h-32 mx-auto mb-8 rounded-full bg-gradient-to-br from-blue-500 to-cyan-500 flex items-center justify-center text-white text-4xl font-bold shadow-2xl" data-implementation="Replace with professional headshot">
+                    AC
+                </div>
+                
+                <h1 class="text-4xl md:text-6xl font-bold text-white mb-6">
+                    <span class="block text-xl md:text-2xl font-normal text-blue-300 mb-2">Hello, I'm</span>
+                    Abhishek Chauhan
+                </h1>
+                
+                <h2 class="text-2xl md:text-4xl font-semibold text-transparent bg-clip-text bg-gradient-to-r from-blue-400 to-cyan-400 mb-6">
+                    Cloud & DevOps Engineer
+                </h2>
+                
+                <p class="text-lg md:text-xl text-slate-300 max-w-3xl mx-auto mb-8 leading-relaxed">
+                    3+ years of experience in AWS, Infrastructure Operations, and Healthcare IT Integration. 
+                    Passionate about building secure, scalable, and efficient cloud solutions.
+                </p>
+                
+                <div class="flex flex-col sm:flex-row gap-4 justify-center items-center">
+                    <a href="#contact" class="inline-flex items-center px-8 py-3 bg-gradient-to-r from-blue-600 to-cyan-600 text-white font-medium rounded-lg hover:from-blue-700 hover:to-cyan-700 transition-all duration-300 transform hover:scale-105 shadow-lg hover:shadow-xl">
+                        <i data-lucide="mail" class="w-5 h-5 mr-2"></i>
+                        Get In Touch
+                    </a>
+                    <a href="#" class="inline-flex items-center px-8 py-3 border-2 border-blue-400 text-blue-400 font-medium rounded-lg hover:bg-blue-400 hover:text-white transition-all duration-300 transform hover:scale-105" data-implementation="Link to actual resume PDF">
+                        <i data-lucide="download" class="w-5 h-5 mr-2"></i>
+                        Download Resume
+                    </a>
+                </div>
+            </div>
+        </div>
+        
+        <!-- Scroll indicator -->
+        <div class="absolute bottom-8 left-1/2 transform -translate-x-1/2 text-white animate-bounce">
+            <i data-lucide="chevron-down" class="w-6 h-6"></i>
+        </div>
+    </section>
+    <!-- @END_COMPONENT: Hero Section -->
+
+    <!-- @COMPONENT: About Section [detailed professional summary] -->
+    <section id="about" class="py-20 bg-white">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center mb-16">
+                <h2 class="text-3xl md:text-4xl font-bold text-navy mb-4">About Me</h2>
+                <div class="w-24 h-1 bg-gradient-to-r from-blue-600 to-cyan-600 mx-auto"></div>
+            </div>
+            
+            <div class="grid lg:grid-cols-2 gap-12 items-center">
+                <div class="animate-slide-up">
+                    <!-- Professional photo placeholder -->
+                    <div class="relative">
+                        <!-- A professional headshot of a cloud engineer in business attire -->
+                        <img src="https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&h=800" alt="Professional headshot" class="rounded-2xl shadow-2xl w-full max-w-md mx-auto" data-mock-image="true" data-implementation="Use actual professional headshot" />
+                        <div class="absolute inset-0 bg-gradient-to-t from-blue-600/20 to-transparent rounded-2xl"></div>
+                    </div>
+                </div>
+                
+                <div class="animate-slide-up" style="animation-delay: 0.2s;">
+                    <h3 class="text-2xl font-semibold text-navy mb-6">Professional Summary</h3>
+                    <p class="text-lg text-slate-600 mb-6 leading-relaxed">
+                        Cloud and DevOps Engineer skilled in AWS, Terraform, Docker, Kubernetes, CI/CD, Linux, and healthcare IT integrations (PACS, HIS, RIS, EMR). Certified in AWS & Azure, passionate about secure and scalable infrastructure.
+                    </p>
+                    
+                    <p class="text-lg text-slate-600 mb-8 leading-relaxed">
+                        I specialize in automating infrastructure deployment, optimizing cloud costs, and ensuring HIPAA compliance in healthcare environments. My approach combines technical expertise with business understanding to deliver solutions that drive organizational success.
+                    </p>
+                    
+                    <!-- Key metrics -->
+                    <div class="grid grid-cols-3 gap-6">
+                        <div class="text-center p-4 bg-slate-50 rounded-lg">
+                            <div class="text-2xl font-bold text-blue-600 mb-1">3+</div>
+                            <div class="text-sm text-slate-600">Years Experience</div>
+                        </div>
+                        <div class="text-center p-4 bg-slate-50 rounded-lg">
+                            <div class="text-2xl font-bold text-blue-600 mb-1">4</div>
+                            <div class="text-sm text-slate-600">Certifications</div>
+                        </div>
+                        <div class="text-center p-4 bg-slate-50 rounded-lg">
+                            <div class="text-2xl font-bold text-blue-600 mb-1">50+</div>
+                            <div class="text-sm text-slate-600">Projects Deployed</div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <!-- @END_COMPONENT: About Section -->
+
+    <!-- @COMPONENT: Experience Section [timeline-based career progression] -->
+    <section id="experience" class="py-20 bg-slate-50">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center mb-16">
+                <h2 class="text-3xl md:text-4xl font-bold text-navy mb-4">Professional Experience</h2>
+                <div class="w-24 h-1 bg-gradient-to-r from-blue-600 to-cyan-600 mx-auto"></div>
+            </div>
+            
+            <div class="relative">
+                <!-- Timeline line -->
+                <div class="absolute left-4 md:left-1/2 transform md:-translate-x-0.5 w-0.5 h-full bg-gradient-to-b from-blue-600 to-cyan-600"></div>
+                
+                <!-- @MAP: experienceItems.map(item => ( -->
+                <!-- Current Position -->
+                <div class="relative mb-12 md:mb-16">
+                    <div class="flex items-center mb-4">
+                        <div class="absolute left-2 md:left-1/2 transform md:-translate-x-1/2 w-4 h-4 bg-blue-600 rounded-full border-4 border-white shadow-lg"></div>
+                        <div class="ml-12 md:ml-0 md:w-1/2 md:pr-8 md:text-right">
+                            <span class="inline-block px-3 py-1 bg-green-100 text-green-800 text-sm font-medium rounded-full mb-2">Current</span>
+                            <p class="text-sm text-slate-500">Jan 2025 – Present</p>
+                        </div>
+                    </div>
+                    <div class="ml-12 md:ml-0 md:w-1/2 md:pr-8 md:text-right md:self-start">
+                        <div class="bg-white p-6 rounded-xl shadow-lg hover:shadow-xl transition-shadow duration-300 border border-slate-200">
+                            <h3 class="text-xl font-semibold text-navy mb-2">Cloud & DevOps Engineer</h3>
+                            <h4 class="text-lg text-blue-600 font-medium mb-4">Feedback Medical</h4>
+                            <ul class="text-slate-600 space-y-2 text-left">
+                                <li class="flex items-start">
+                                    <i data-lucide="check-circle" class="w-4 h-4 text-green-500 mt-1 mr-2 flex-shrink-0"></i>
+                                    Deployed and configured cloud-native healthcare applications on AWS
+                                </li>
+                                <li class="flex items-start">
+                                    <i data-lucide="check-circle" class="w-4 h-4 text-green-500 mt-1 mr-2 flex-shrink-0"></i>
+                                    Automated infrastructure provisioning with Terraform and Jenkins
+                                </li>
+                                <li class="flex items-start">
+                                    <i data-lucide="check-circle" class="w-4 h-4 text-green-500 mt-1 mr-2 flex-shrink-0"></i>
+                                    Ensured HIPAA compliance and supported hospital IT teams
+                                </li>
+                                <li class="flex items-start">
+                                    <i data-lucide="check-circle" class="w-4 h-4 text-green-500 mt-1 mr-2 flex-shrink-0"></i>
+                                    Implemented monitoring solutions with CloudWatch and Grafana
+                                </li>
+                            </ul>
+                            <div class="flex flex-wrap gap-2 mt-4">
+                                <span class="px-2 py-1 bg-blue-100 text-blue-800 text-xs font-medium rounded">AWS</span>
+                                <span class="px-2 py-1 bg-blue-100 text-blue-800 text-xs font-medium rounded">Terraform</span>
+                                <span class="px-2 py-1 bg-blue-100 text-blue-800 text-xs font-medium rounded">HIPAA</span>
+                                <span class="px-2 py-1 bg-blue-100 text-blue-800 text-xs font-medium rounded">Healthcare IT</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- Previous Position -->
+                <div class="relative mb-12 md:mb-16">
+                    <div class="flex items-center mb-4">
+                        <div class="absolute left-2 md:left-1/2 transform md:-translate-x-1/2 w-4 h-4 bg-cyan-600 rounded-full border-4 border-white shadow-lg"></div>
+                        <div class="ml-12 md:ml-0 md:w-1/2 md:pl-8 md:text-left md:ml-auto">
+                            <p class="text-sm text-slate-500">Jul 2022 – Sept 2024</p>
+                        </div>
+                    </div>
+                    <div class="ml-12 md:ml-0 md:w-1/2 md:pl-8 md:text-left md:ml-auto">
+                        <div class="bg-white p-6 rounded-xl shadow-lg hover:shadow-xl transition-shadow duration-300 border border-slate-200">
+                            <h3 class="text-xl font-semibold text-navy mb-2">Software Engineer</h3>
+                            <h4 class="text-lg text-cyan-600 font-medium mb-4">Cognizant Technology Solutions</h4>
+                            <ul class="text-slate-600 space-y-2 text-left">
+                                <li class="flex items-start">
+                                    <i data-lucide="check-circle" class="w-4 h-4 text-green-500 mt-1 mr-2 flex-shrink-0"></i>
+                                    Developed robust APIs using Java Spring Boot framework
+                                </li>
+                                <li class="flex items-start">
+                                    <i data-lucide="check-circle" class="w-4 h-4 text-green-500 mt-1 mr-2 flex-shrink-0"></i>
+                                    Automated AWS infrastructure deployment with Terraform
+                                </li>
+                                <li class="flex items-start">
+                                    <i data-lucide="check-circle" class="w-4 h-4 text-green-500 mt-1 mr-2 flex-shrink-0"></i>
+                                    Built and maintained CI/CD pipelines with Jenkins
+                                </li>
+                                <li class="flex items-start">
+                                    <i data-lucide="check-circle" class="w-4 h-4 text-green-500 mt-1 mr-2 flex-shrink-0"></i>
+                                    Collaborated with cross-functional teams on enterprise solutions
+                                </li>
+                            </ul>
+                            <div class="flex flex-wrap gap-2 mt-4">
+                                <span class="px-2 py-1 bg-cyan-100 text-cyan-800 text-xs font-medium rounded">Java</span>
+                                <span class="px-2 py-1 bg-cyan-100 text-cyan-800 text-xs font-medium rounded">Spring Boot</span>
+                                <span class="px-2 py-1 bg-cyan-100 text-cyan-800 text-xs font-medium rounded">Jenkins</span>
+                                <span class="px-2 py-1 bg-cyan-100 text-cyan-800 text-xs font-medium rounded">AWS</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <!-- @END_MAP )) -->
+            </div>
+        </div>
+    </section>
+    <!-- @END_COMPONENT: Experience Section -->
+
+    <!-- @COMPONENT: Skills Section [categorized with proficiency indicators] -->
+    <section id="skills" class="py-20 bg-white">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center mb-16">
+                <h2 class="text-3xl md:text-4xl font-bold text-navy mb-4">Technical Skills</h2>
+                <div class="w-24 h-1 bg-gradient-to-r from-blue-600 to-cyan-600 mx-auto"></div>
+            </div>
+            
+            <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
+                <!-- Cloud Platforms -->
+                <div class="bg-slate-50 p-6 rounded-xl shadow-lg hover:shadow-xl transition-all duration-300 transform hover:-translate-y-1">
+                    <div class="flex items-center mb-4">
+                        <div class="w-12 h-12 bg-gradient-to-r from-blue-500 to-blue-600 rounded-lg flex items-center justify-center mr-4">
+                            <i data-lucide="cloud" class="w-6 h-6 text-white"></i>
+                        </div>
+                        <h3 class="text-lg font-semibold text-navy">Cloud Platforms</h3>
+                    </div>
+                    <div class="space-y-3">
+                        <div>
+                            <div class="flex justify-between mb-1">
+                                <span class="text-sm text-slate-600">AWS</span>
+                                <span class="text-sm text-slate-500">90%</span>
+                            </div>
+                            <div class="w-full bg-slate-200 rounded-full h-2">
+                                <div class="bg-gradient-to-r from-blue-500 to-blue-600 h-2 rounded-full skill-bar" style="width: 90%"></div>
+                            </div>
+                        </div>
+                        <div>
+                            <div class="flex justify-between mb-1">
+                                <span class="text-sm text-slate-600">Azure</span>
+                                <span class="text-sm text-slate-500">75%</span>
+                            </div>
+                            <div class="w-full bg-slate-200 rounded-full h-2">
+                                <div class="bg-gradient-to-r from-blue-500 to-blue-600 h-2 rounded-full skill-bar" style="width: 75%"></div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- DevOps Tools -->
+                <div class="bg-slate-50 p-6 rounded-xl shadow-lg hover:shadow-xl transition-all duration-300 transform hover:-translate-y-1">
+                    <div class="flex items-center mb-4">
+                        <div class="w-12 h-12 bg-gradient-to-r from-green-500 to-green-600 rounded-lg flex items-center justify-center mr-4">
+                            <i data-lucide="settings" class="w-6 h-6 text-white"></i>
+                        </div>
+                        <h3 class="text-lg font-semibold text-navy">DevOps Tools</h3>
+                    </div>
+                    <div class="space-y-3">
+                        <div>
+                            <div class="flex justify-between mb-1">
+                                <span class="text-sm text-slate-600">Terraform</span>
+                                <span class="text-sm text-slate-500">95%</span>
+                            </div>
+                            <div class="w-full bg-slate-200 rounded-full h-2">
+                                <div class="bg-gradient-to-r from-green-500 to-green-600 h-2 rounded-full skill-bar" style="width: 95%"></div>
+                            </div>
+                        </div>
+                        <div>
+                            <div class="flex justify-between mb-1">
+                                <span class="text-sm text-slate-600">Docker</span>
+                                <span class="text-sm text-slate-500">90%</span>
+                            </div>
+                            <div class="w-full bg-slate-200 rounded-full h-2">
+                                <div class="bg-gradient-to-r from-green-500 to-green-600 h-2 rounded-full skill-bar" style="width: 90%"></div>
+                            </div>
+                        </div>
+                        <div>
+                            <div class="flex justify-between mb-1">
+                                <span class="text-sm text-slate-600">Kubernetes</span>
+                                <span class="text-sm text-slate-500">85%</span>
+                            </div>
+                            <div class="w-full bg-slate-200 rounded-full h-2">
+                                <div class="bg-gradient-to-r from-green-500 to-green-600 h-2 rounded-full skill-bar" style="width: 85%"></div>
+                            </div>
+                        </div>
+                        <div>
+                            <div class="flex justify-between mb-1">
+                                <span class="text-sm text-slate-600">Jenkins</span>
+                                <span class="text-sm text-slate-500">88%</span>
+                            </div>
+                            <div class="w-full bg-slate-200 rounded-full h-2">
+                                <div class="bg-gradient-to-r from-green-500 to-green-600 h-2 rounded-full skill-bar" style="width: 88%"></div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Middleware & Web Servers -->
+                <div class="bg-slate-50 p-6 rounded-xl shadow-lg hover:shadow-xl transition-all duration-300 transform hover:-translate-y-1">
+                    <div class="flex items-center mb-4">
+                        <div class="w-12 h-12 bg-gradient-to-r from-purple-500 to-purple-600 rounded-lg flex items-center justify-center mr-4">
+                            <i data-lucide="server" class="w-6 h-6 text-white"></i>
+                        </div>
+                        <h3 class="text-lg font-semibold text-navy">Middleware</h3>
+                    </div>
+                    <div class="space-y-3">
+                        <div>
+                            <div class="flex justify-between mb-1">
+                                <span class="text-sm text-slate-600">Nginx</span>
+                                <span class="text-sm text-slate-500">85%</span>
+                            </div>
+                            <div class="w-full bg-slate-200 rounded-full h-2">
+                                <div class="bg-gradient-to-r from-purple-500 to-purple-600 h-2 rounded-full skill-bar" style="width: 85%"></div>
+                            </div>
+                        </div>
+                        <div>
+                            <div class="flex justify-between mb-1">
+                                <span class="text-sm text-slate-600">Apache</span>
+                                <span class="text-sm text-slate-500">80%</span>
+                            </div>
+                            <div class="w-full bg-slate-200 rounded-full h-2">
+                                <div class="bg-gradient-to-r from-purple-500 to-purple-600 h-2 rounded-full skill-bar" style="width: 80%"></div>
+                            </div>
+                        </div>
+                        <div>
+                            <div class="flex justify-between mb-1">
+                                <span class="text-sm text-slate-600">HAProxy</span>
+                                <span class="text-sm text-slate-500">75%</span>
+                            </div>
+                            <div class="w-full bg-slate-200 rounded-full h-2">
+                                <div class="bg-gradient-to-r from-purple-500 to-purple-600 h-2 rounded-full skill-bar" style="width: 75%"></div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Databases -->
+                <div class="bg-slate-50 p-6 rounded-xl shadow-lg hover:shadow-xl transition-all duration-300 transform hover:-translate-y-1">
+                    <div class="flex items-center mb-4">
+                        <div class="w-12 h-12 bg-gradient-to-r from-orange-500 to-orange-600 rounded-lg flex items-center justify-center mr-4">
+                            <i data-lucide="database" class="w-6 h-6 text-white"></i>
+                        </div>
+                        <h3 class="text-lg font-semibold text-navy">Databases</h3>
+                    </div>
+                    <div class="space-y-3">
+                        <div>
+                            <div class="flex justify-between mb-1">
+                                <span class="text-sm text-slate-600">MySQL</span>
+                                <span class="text-sm text-slate-500">90%</span>
+                            </div>
+                            <div class="w-full bg-slate-200 rounded-full h-2">
+                                <div class="bg-gradient-to-r from-orange-500 to-orange-600 h-2 rounded-full skill-bar" style="width: 90%"></div>
+                            </div>
+                        </div>
+                        <div>
+                            <div class="flex justify-between mb-1">
+                                <span class="text-sm text-slate-600">MongoDB</span>
+                                <span class="text-sm text-slate-500">85%</span>
+                            </div>
+                            <div class="w-full bg-slate-200 rounded-full h-2">
+                                <div class="bg-gradient-to-r from-orange-500 to-orange-600 h-2 rounded-full skill-bar" style="width: 85%"></div>
+                            </div>
+                        </div>
+                        <div>
+                            <div class="flex justify-between mb-1">
+                                <span class="text-sm text-slate-600">Redis</span>
+                                <span class="text-sm text-slate-500">80%</span>
+                            </div>
+                            <div class="w-full bg-slate-200 rounded-full h-2">
+                                <div class="bg-gradient-to-r from-orange-500 to-orange-600 h-2 rounded-full skill-bar" style="width: 80%"></div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Monitoring & Tools -->
+                <div class="bg-slate-50 p-6 rounded-xl shadow-lg hover:shadow-xl transition-all duration-300 transform hover:-translate-y-1">
+                    <div class="flex items-center mb-4">
+                        <div class="w-12 h-12 bg-gradient-to-r from-red-500 to-red-600 rounded-lg flex items-center justify-center mr-4">
+                            <i data-lucide="activity" class="w-6 h-6 text-white"></i>
+                        </div>
+                        <h3 class="text-lg font-semibold text-navy">Monitoring & Tools</h3>
+                    </div>
+                    <div class="space-y-3">
+                        <div>
+                            <div class="flex justify-between mb-1">
+                                <span class="text-sm text-slate-600">Prometheus</span>
+                                <span class="text-sm text-slate-500">85%</span>
+                            </div>
+                            <div class="w-full bg-slate-200 rounded-full h-2">
+                                <div class="bg-gradient-to-r from-red-500 to-red-600 h-2 rounded-full skill-bar" style="width: 85%"></div>
+                            </div>
+                        </div>
+                        <div>
+                            <div class="flex justify-between mb-1">
+                                <span class="text-sm text-slate-600">Grafana</span>
+                                <span class="text-sm text-slate-500">90%</span>
+                            </div>
+                            <div class="w-full bg-slate-200 rounded-full h-2">
+                                <div class="bg-gradient-to-r from-red-500 to-red-600 h-2 rounded-full skill-bar" style="width: 90%"></div>
+                            </div>
+                        </div>
+                        <div>
+                            <div class="flex justify-between mb-1">
+                                <span class="text-sm text-slate-600">ELK Stack</span>
+                                <span class="text-sm text-slate-500">80%</span>
+                            </div>
+                            <div class="w-full bg-slate-200 rounded-full h-2">
+                                <div class="bg-gradient-to-r from-red-500 to-red-600 h-2 rounded-full skill-bar" style="width: 80%"></div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Programming Languages -->
+                <div class="bg-slate-50 p-6 rounded-xl shadow-lg hover:shadow-xl transition-all duration-300 transform hover:-translate-y-1">
+                    <div class="flex items-center mb-4">
+                        <div class="w-12 h-12 bg-gradient-to-r from-indigo-500 to-indigo-600 rounded-lg flex items-center justify-center mr-4">
+                            <i data-lucide="code" class="w-6 h-6 text-white"></i>
+                        </div>
+                        <h3 class="text-lg font-semibold text-navy">Programming</h3>
+                    </div>
+                    <div class="space-y-3">
+                        <div>
+                            <div class="flex justify-between mb-1">
+                                <span class="text-sm text-slate-600">Python</span>
+                                <span class="text-sm text-slate-500">85%</span>
+                            </div>
+                            <div class="w-full bg-slate-200 rounded-full h-2">
+                                <div class="bg-gradient-to-r from-indigo-500 to-indigo-600 h-2 rounded-full skill-bar" style="width: 85%"></div>
+                            </div>
+                        </div>
+                        <div>
+                            <div class="flex justify-between mb-1">
+                                <span class="text-sm text-slate-600">Java</span>
+                                <span class="text-sm text-slate-500">70%</span>
+                            </div>
+                            <div class="w-full bg-slate-200 rounded-full h-2">
+                                <div class="bg-gradient-to-r from-indigo-500 to-indigo-600 h-2 rounded-full skill-bar" style="width: 70%"></div>
+                            </div>
+                        </div>
+                        <div>
+                            <div class="flex justify-between mb-1">
+                                <span class="text-sm text-slate-600">Bash/Shell</span>
+                                <span class="text-sm text-slate-500">90%</span>
+                            </div>
+                            <div class="w-full bg-slate-200 rounded-full h-2">
+                                <div class="bg-gradient-to-r from-indigo-500 to-indigo-600 h-2 rounded-full skill-bar" style="width: 90%"></div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <!-- @END_COMPONENT: Skills Section -->
+
+    <!-- @COMPONENT: Certifications Section [professional credentials with logos] -->
+    <section id="certifications" class="py-20 bg-slate-50">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center mb-16">
+                <h2 class="text-3xl md:text-4xl font-bold text-navy mb-4">Certifications</h2>
+                <div class="w-24 h-1 bg-gradient-to-r from-blue-600 to-cyan-600 mx-auto"></div>
+            </div>
+            
+            <div class="grid md:grid-cols-2 lg:grid-cols-4 gap-6">
+                <!-- @MAP: certifications.map(cert => ( -->
+                <!-- AWS Cloud Practitioner -->
+                <div class="bg-white p-6 rounded-xl shadow-lg hover:shadow-xl transition-all duration-300 transform hover:-translate-y-2 border border-slate-200">
+                    <div class="text-center">
+                        <!-- AWS logo placeholder -->
+                        <div class="w-16 h-16 mx-auto mb-4 bg-gradient-to-br from-orange-400 to-orange-600 rounded-lg flex items-center justify-center">
+                            <span class="text-white font-bold text-lg">AWS</span>
+                        </div>
+                        <h3 class="text-lg font-semibold text-navy mb-2">AWS Cloud Practitioner</h3>
+                        <p class="text-sm text-slate-600 mb-4">Amazon Web Services</p>
+                        <div class="flex items-center justify-center text-green-600 text-sm">
+                            <i data-lucide="shield-check" class="w-4 h-4 mr-1"></i>
+                            Verified
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Azure Fundamentals -->
+                <div class="bg-white p-6 rounded-xl shadow-lg hover:shadow-xl transition-all duration-300 transform hover:-translate-y-2 border border-slate-200">
+                    <div class="text-center">
+                        <!-- Microsoft Azure logo placeholder -->
+                        <div class="w-16 h-16 mx-auto mb-4 bg-gradient-to-br from-blue-500 to-blue-700 rounded-lg flex items-center justify-center">
+                            <span class="text-white font-bold text-sm">Azure</span>
+                        </div>
+                        <h3 class="text-lg font-semibold text-navy mb-2">Azure Fundamentals</h3>
+                        <p class="text-sm text-slate-600 mb-4">Microsoft (AZ-900)</p>
+                        <div class="flex items-center justify-center text-green-600 text-sm">
+                            <i data-lucide="shield-check" class="w-4 h-4 mr-1"></i>
+                            Verified
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Power BI -->
+                <div class="bg-white p-6 rounded-xl shadow-lg hover:shadow-xl transition-all duration-300 transform hover:-translate-y-2 border border-slate-200">
+                    <div class="text-center">
+                        <!-- Power BI logo placeholder -->
+                        <div class="w-16 h-16 mx-auto mb-4 bg-gradient-to-br from-yellow-400 to-yellow-600 rounded-lg flex items-center justify-center">
+                            <span class="text-white font-bold text-sm">PBI</span>
+                        </div>
+                        <h3 class="text-lg font-semibold text-navy mb-2">Power BI Data Analyst</h3>
+                        <p class="text-sm text-slate-600 mb-4">Microsoft Associate</p>
+                        <div class="flex items-center justify-center text-green-600 text-sm">
+                            <i data-lucide="shield-check" class="w-4 h-4 mr-1"></i>
+                            Verified
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Mendix -->
+                <div class="bg-white p-6 rounded-xl shadow-lg hover:shadow-xl transition-all duration-300 transform hover:-translate-y-2 border border-slate-200">
+                    <div class="text-center">
+                        <!-- Mendix logo placeholder -->
+                        <div class="w-16 h-16 mx-auto mb-4 bg-gradient-to-br from-purple-500 to-purple-700 rounded-lg flex items-center justify-center">
+                            <span class="text-white font-bold text-sm">MX</span>
+                        </div>
+                        <h3 class="text-lg font-semibold text-navy mb-2">Mendix Intermediate</h3>
+                        <p class="text-sm text-slate-600 mb-4">Developer Certification</p>
+                        <div class="flex items-center justify-center text-green-600 text-sm">
+                            <i data-lucide="shield-check" class="w-4 h-4 mr-1"></i>
+                            Verified
+                        </div>
+                    </div>
+                </div>
+                <!-- @END_MAP )) -->
+            </div>
+
+            <!-- Additional achievements -->
+            <div class="mt-12 text-center">
+                <div class="inline-flex items-center px-6 py-3 bg-gradient-to-r from-blue-50 to-cyan-50 rounded-full border border-blue-200">
+                    <i data-lucide="trophy" class="w-5 h-5 text-blue-600 mr-2"></i>
+                    <span class="text-blue-800 font-medium">Continuous learner with 4 professional certifications</span>
+                </div>
+            </div>
+        </div>
+    </section>
+    <!-- @END_COMPONENT: Certifications Section -->
+
+    <!-- @COMPONENT: Contact Section [professional contact form with social links] -->
+    <section id="contact" class="py-20 bg-navy relative overflow-hidden">
+        <!-- Background decoration -->
+        <div class="absolute inset-0 bg-gradient-to-br from-blue-900/20 to-cyan-900/20"></div>
+        <div class="absolute top-0 left-0 w-96 h-96 bg-blue-500/10 rounded-full blur-3xl"></div>
+        <div class="absolute bottom-0 right-0 w-96 h-96 bg-cyan-500/10 rounded-full blur-3xl"></div>
+        
+        <div class="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center mb-16">
+                <h2 class="text-3xl md:text-4xl font-bold text-white mb-4">Get In Touch</h2>
+                <div class="w-24 h-1 bg-gradient-to-r from-blue-400 to-cyan-400 mx-auto mb-6"></div>
+                <p class="text-xl text-slate-300 max-w-2xl mx-auto">
+                    Ready to discuss your next cloud infrastructure project? Let's build something amazing together.
+                </p>
+            </div>
+            
+            <div class="grid lg:grid-cols-2 gap-12 items-start">
+                <!-- Contact Information -->
+                <div class="space-y-8">
+                    <div>
+                        <h3 class="text-2xl font-semibold text-white mb-6">Let's Connect</h3>
+                        <p class="text-slate-300 text-lg leading-relaxed mb-8">
+                            I'm always interested in discussing new opportunities, innovative projects, and collaborations in cloud infrastructure and DevOps.
+                        </p>
+                    </div>
+                    
+                    <!-- Contact details -->
+                    <div class="space-y-6">
+                        <div class="flex items-center">
+                            <div class="w-12 h-12 bg-blue-600 rounded-lg flex items-center justify-center mr-4">
+                                <i data-lucide="mail" class="w-6 h-6 text-white"></i>
+                            </div>
+                            <div>
+                                <p class="text-slate-400 text-sm">Email</p>
+                                <a href="mailto:abhishek184054@gmail.com" class="text-white hover:text-blue-400 transition-colors text-lg" data-bind="contact.email">abhishek184054@gmail.com</a>
+                            </div>
+                        </div>
+                        
+                        <div class="flex items-center">
+                            <div class="w-12 h-12 bg-blue-600 rounded-lg flex items-center justify-center mr-4">
+                                <i data-lucide="phone" class="w-6 h-6 text-white"></i>
+                            </div>
+                            <div>
+                                <p class="text-slate-400 text-sm">Phone</p>
+                                <a href="tel:+918091753343" class="text-white hover:text-blue-400 transition-colors text-lg" data-bind="contact.phone">+91-8091753343</a>
+                            </div>
+                        </div>
+                        
+                        <div class="flex items-center">
+                            <div class="w-12 h-12 bg-blue-600 rounded-lg flex items-center justify-center mr-4">
+                                <i data-lucide="linkedin" class="w-6 h-6 text-white"></i>
+                            </div>
+                            <div>
+                                <p class="text-slate-400 text-sm">LinkedIn</p>
+                                <a href="https://linkedin.com/in/abhishek-chauhan-429554206" target="_blank" class="text-white hover:text-blue-400 transition-colors text-lg" data-bind="contact.linkedin">linkedin.com/in/abhishek-chauhan-429554206</a>
+                            </div>
+                        </div>
+                        
+                        <div class="flex items-center">
+                            <div class="w-12 h-12 bg-blue-600 rounded-lg flex items-center justify-center mr-4">
+                                <i data-lucide="map-pin" class="w-6 h-6 text-white"></i>
+                            </div>
+                            <div>
+                                <p class="text-slate-400 text-sm">Location</p>
+                                <p class="text-white text-lg">India</p>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <!-- Social Media Links -->
+                    <div class="pt-8">
+                        <p class="text-slate-400 mb-4">Follow me on social media</p>
+                        <div class="flex space-x-4">
+                            <a href="#" class="w-10 h-10 bg-slate-700 hover:bg-blue-600 rounded-lg flex items-center justify-center transition-colors duration-300" data-implementation="Link to actual GitHub profile">
+                                <i data-lucide="github" class="w-5 h-5 text-white"></i>
+                            </a>
+                            <a href="https://linkedin.com/in/abhishek-chauhan-429554206" target="_blank" class="w-10 h-10 bg-slate-700 hover:bg-blue-600 rounded-lg flex items-center justify-center transition-colors duration-300">
+                                <i data-lucide="linkedin" class="w-5 h-5 text-white"></i>
+                            </a>
+                            <a href="#" class="w-10 h-10 bg-slate-700 hover:bg-blue-600 rounded-lg flex items-center justify-center transition-colors duration-300" data-implementation="Link to actual Twitter profile">
+                                <i data-lucide="twitter" class="w-5 h-5 text-white"></i>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- Contact Form -->
+                <div class="bg-white/10 backdrop-blur-md p-8 rounded-2xl border border-white/20">
+                    <h3 class="text-xl font-semibold text-white mb-6">Send me a message</h3>
+                    <form class="space-y-6" data-implementation="Implement form submission logic">
+                        <div>
+                            <label for="name" class="block text-sm font-medium text-slate-300 mb-2">Your Name</label>
+                            <input type="text" id="name" name="name" class="w-full px-4 py-3 bg-white/10 border border-white/20 rounded-lg text-white placeholder-slate-400 focus:outline-none focus:ring-2 focus:ring-blue-400 focus:border-transparent transition-all" placeholder="John Doe" data-mock="true">
+                        </div>
+                        <div>
+                            <label for="email" class="block text-sm font-medium text-slate-300 mb-2">Your Email</label>
+                            <input type="email" id="email" name="email" class="w-full px-4 py-3 bg-white/10 border border-white/20 rounded-lg text-white placeholder-slate-400 focus:outline-none focus:ring-2 focus:ring-blue-400 focus:border-transparent transition-all" placeholder="john@example.com" data-mock="true">
+                        </div>
+                        <div>
+                            <label for="subject" class="block text-sm font-medium text-slate-300 mb-2">Subject</label>
+                            <input type="text" id="subject" name="subject" class="w-full px-4 py-3 bg-white/10 border border-white/20 rounded-lg text-white placeholder-slate-400 focus:outline-none focus:ring-2 focus:ring-blue-400 focus:border-transparent transition-all" placeholder="Project Discussion" data-mock="true">
+                        </div>
+                        <div>
+                            <label for="message" class="block text-sm font-medium text-slate-300 mb-2">Message</label>
+                            <textarea id="message" name="message" rows="4" class="w-full px-4 py-3 bg-white/10 border border-white/20 rounded-lg text-white placeholder-slate-400 focus:outline-none focus:ring-2 focus:ring-blue-400 focus:border-transparent transition-all resize-none" placeholder="Tell me about your project..." data-mock="true"></textarea>
+                        </div>
+                        <button type="submit" class="w-full bg-gradient-to-r from-blue-600 to-cyan-600 text-white font-medium py-3 px-6 rounded-lg hover:from-blue-700 hover:to-cyan-700 transition-all duration-300 transform hover:scale-105 focus:outline-none focus:ring-2 focus:ring-blue-400 focus:ring-offset-2 focus:ring-offset-transparent" data-event="click:handleSubmit">
+                            Send Message
+                        </button>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </section>
+    <!-- @END_COMPONENT: Contact Section -->
+
+    <!-- @COMPONENT: Footer [professional footer with copyright] -->
+    <footer class="bg-slate-900 py-12 border-t border-slate-800">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="grid md:grid-cols-3 gap-8 mb-8">
+                <div>
+                    <div class="text-2xl font-bold text-white mb-4">Abhishek Chauhan</div>
+                    <p class="text-slate-400">Cloud & DevOps Engineer passionate about building scalable, secure infrastructure solutions.</p>
+                </div>
+                
+                <div>
+                    <h4 class="text-white font-semibold mb-4">Quick Links</h4>
+                    <ul class="space-y-2">
+                        <li><a href="#home" class="text-slate-400 hover:text-white transition-colors">Home</a></li>
+                        <li><a href="#about" class="text-slate-400 hover:text-white transition-colors">About</a></li>
+                        <li><a href="#experience" class="text-slate-400 hover:text-white transition-colors">Experience</a></li>
+                        <li><a href="#skills" class="text-slate-400 hover:text-white transition-colors">Skills</a></li>
+                    </ul>
+                </div>
+                
+                <div>
+                    <h4 class="text-white font-semibold mb-4">Contact Info</h4>
+                    <ul class="space-y-2">
+                        <li class="text-slate-400">abhishek184054@gmail.com</li>
+                        <li class="text-slate-400">+91-8091753343</li>
+                        <li class="text-slate-400">India</li>
+                    </ul>
+                </div>
+            </div>
+            
+            <div class="border-t border-slate-800 pt-8 flex flex-col md:flex-row justify-between items-center">
+                <p class="text-slate-400 text-sm">
+                    © 2025 Abhishek Chauhan. All rights reserved.
+                </p>
+                <div class="flex space-x-4 mt-4 md:mt-0">
+                    <a href="#" class="text-slate-400 hover:text-white transition-colors text-sm" data-implementation="Add privacy policy">Privacy Policy</a>
+                    <a href="#" class="text-slate-400 hover:text-white transition-colors text-sm" data-implementation="Add terms of service">Terms of Service</a>
+                </div>
+            </div>
+        </div>
+    </footer>
+    <!-- @END_COMPONENT: Footer -->
+
+    <script>
+        // Initialize Lucide icons
+        (function() {
+            if (typeof lucide !== 'undefined') {
+                lucide.createIcons();
+            }
+        })();
+
+        // Smooth scrolling with offset for fixed header
+        (function() {
+            const navLinks = document.querySelectorAll('a[href^="#"]');
+            
+            navLinks.forEach(link => {
+                link.addEventListener('click', function(e) {
+                    e.preventDefault();
+                    
+                    const targetId = this.getAttribute('href');
+                    const targetSection = document.querySelector(targetId);
+                    
+                    if (targetSection) {
+                        const headerHeight = 64; // 4rem = 64px
+                        const targetPosition = targetSection.offsetTop - headerHeight;
+                        
+                        window.scrollTo({
+                            top: targetPosition,
+                            behavior: 'smooth'
+                        });
+                        
+                        // Update active nav link
+                        updateActiveNavLink(targetId);
+                    }
+                });
+            });
+        })();
+
+        // Update active navigation link on scroll
+        (function() {
+            function updateActiveNavLink(activeId = null) {
+                const navLinks = document.querySelectorAll('nav a[href^="#"]');
+                
+                navLinks.forEach(link => {
+                    const href = link.getAttribute('href');
+                    if (activeId === href || (!activeId && isElementInViewport(href))) {
+                        link.classList.add('text-navy', 'border-blue-600');
+                        link.classList.remove('text-slate-600');
+                    } else {
+                        link.classList.remove('text-navy', 'border-blue-600');
+                        link.classList.add('text-slate-600');
+                    }
+                });
+            }
+
+            function isElementInViewport(selector) {
+                const element = document.querySelector(selector);
+                if (!element) return false;
+                
+                const rect = element.getBoundingClientRect();
+                const headerHeight = 64;
+                
+                return rect.top <= headerHeight && rect.bottom >= headerHeight;
+            }
+
+            // Update on scroll
+            let scrollTimeout;
+            window.addEventListener('scroll', function() {
+                clearTimeout(scrollTimeout);
+                scrollTimeout = setTimeout(updateActiveNavLink, 10);
+            });
+        })();
+
+        // Animate skill bars when they come into view
+        (function() {
+            const skillBars = document.querySelectorAll('.skill-bar');
+            
+            const observerOptions = {
+                threshold: 0.5,
+                rootMargin: '0px 0px -50px 0px'
+            };
+            
+            const observer = new IntersectionObserver(function(entries) {
+                entries.forEach(entry => {
+                    if (entry.isIntersecting) {
+                        const skillBar = entry.target;
+                        const width = skillBar.style.width;
+                        skillBar.style.width = '0%';
+                        setTimeout(() => {
+                            skillBar.style.width = width;
+                        }, 200);
+                    }
+                });
+            }, observerOptions);
+            
+            skillBars.forEach(bar => observer.observe(bar));
+        })();
+
+        // TODO: Implement form submission logic
+        // TODO: Add mobile menu toggle functionality
+        // TODO: Add loading states for interactions
+        // TODO: Implement resume download tracking
+    </script>
+</body>
+</html>

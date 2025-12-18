@@ -1,0 +1,670 @@
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Abhishek Chauhan - Cloud & DevOps Engineer</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    fontFamily: {
+                        'inter': ['Inter', 'sans-serif'],
+                    },
+                    colors: {
+                        primary: '#3B82F6',
+                        secondary: '#64748B',
+                        accent: '#10B981',
+                    }
+                }
+            }
+        };
+    </script>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+<body class="font-inter bg-gray-50 text-gray-900">
+    <!-- @COMPONENT: Header [sticky navigation with mobile menu] -->
+    <header class="bg-white shadow-lg sticky top-0 z-50">
+        <nav class="container mx-auto px-6 py-4">
+            <div class="flex justify-between items-center">
+                <div class="text-2xl font-bold text-primary">
+                    <span data-bind="user.name">Abhishek Chauhan</span>
+                </div>
+                
+                <!-- Desktop Navigation -->
+                <ul class="hidden md:flex space-x-8">
+                    <li><a href="#home" class="text-gray-700 hover:text-primary transition-colors duration-300 font-medium">Home</a></li>
+                    <li><a href="#about" class="text-gray-700 hover:text-primary transition-colors duration-300 font-medium">About</a></li>
+                    <li><a href="#experience" class="text-gray-700 hover:text-primary transition-colors duration-300 font-medium">Experience</a></li>
+                    <li><a href="#skills" class="text-gray-700 hover:text-primary transition-colors duration-300 font-medium">Skills</a></li>
+                    <li><a href="#certifications" class="text-gray-700 hover:text-primary transition-colors duration-300 font-medium">Certifications</a></li>
+                    <li><a href="#contact" class="text-gray-700 hover:text-primary transition-colors duration-300 font-medium">Contact</a></li>
+                </ul>
+                
+                <!-- Mobile Menu Button -->
+                <button class="md:hidden text-gray-700" id="mobile-menu-btn">
+                    <i class="fas fa-bars text-xl"></i>
+                </button>
+            </div>
+            
+            <!-- Mobile Navigation -->
+            <div class="md:hidden hidden" id="mobile-menu">
+                <ul class="flex flex-col space-y-4 mt-4 pb-4">
+                    <li><a href="#home" class="block text-gray-700 hover:text-primary transition-colors duration-300 font-medium">Home</a></li>
+                    <li><a href="#about" class="block text-gray-700 hover:text-primary transition-colors duration-300 font-medium">About</a></li>
+                    <li><a href="#experience" class="block text-gray-700 hover:text-primary transition-colors duration-300 font-medium">Experience</a></li>
+                    <li><a href="#skills" class="block text-gray-700 hover:text-primary transition-colors duration-300 font-medium">Skills</a></li>
+                    <li><a href="#certifications" class="block text-gray-700 hover:text-primary transition-colors duration-300 font-medium">Certifications</a></li>
+                    <li><a href="#contact" class="block text-gray-700 hover:text-primary transition-colors duration-300 font-medium">Contact</a></li>
+                </ul>
+            </div>
+        </nav>
+    </header>
+    <!-- @END_COMPONENT: Header -->
+
+    <!-- @COMPONENT: HeroSection [main landing area with CTA] -->
+    <section id="home" class="bg-gradient-to-br from-primary to-blue-700 text-white py-20 lg:py-32">
+        <div class="container mx-auto px-6 text-center">
+            <div class="max-w-4xl mx-auto">
+                <h1 class="text-4xl lg:text-6xl font-bold mb-6 leading-tight">
+                    <span data-bind="user.title">Cloud & DevOps Engineer</span>
+                </h1>
+                <p class="text-xl lg:text-2xl mb-8 opacity-90">
+                    3+ years of experience in AWS, Infra Operations, and DevOps Engineering
+                </p>
+                <div class="flex flex-col sm:flex-row justify-center gap-4 mb-12">
+                    <button class="bg-white text-primary px-8 py-4 rounded-lg font-semibold hover:bg-gray-100 transition-colors duration-300 shadow-lg" data-event="click:downloadResume">
+                        <i class="fas fa-download mr-2"></i>Download Resume
+                    </button>
+                    <a href="#contact" class="border-2 border-white text-white px-8 py-4 rounded-lg font-semibold hover:bg-white hover:text-primary transition-all duration-300">
+                        <i class="fas fa-envelope mr-2"></i>Get In Touch
+                    </a>
+                </div>
+                <div class="flex justify-center space-x-6">
+                    <a href="mailto:abhishek184054@gmail.com" class="text-white hover:text-gray-200 transition-colors duration-300">
+                        <i class="fas fa-envelope text-2xl"></i>
+                    </a>
+                    <a href="https://linkedin.com/in/abhishek-chauhan-429554206" class="text-white hover:text-gray-200 transition-colors duration-300" target="_blank">
+                        <i class="fab fa-linkedin text-2xl"></i>
+                    </a>
+                    <a href="tel:+918091753343" class="text-white hover:text-gray-200 transition-colors duration-300">
+                        <i class="fas fa-phone text-2xl"></i>
+                    </a>
+                </div>
+            </div>
+        </div>
+    </section>
+    <!-- @END_COMPONENT: HeroSection -->
+
+    <!-- @COMPONENT: AboutSection [professional summary] -->
+    <section id="about" class="py-20 bg-white">
+        <div class="container mx-auto px-6">
+            <div class="max-w-4xl mx-auto text-center">
+                <h2 class="text-4xl font-bold text-gray-900 mb-8">About Me</h2>
+                <div class="w-24 h-1 bg-primary mx-auto mb-12"></div>
+                <div class="bg-gray-50 p-8 rounded-2xl shadow-lg">
+                    <p class="text-lg text-gray-700 leading-relaxed">
+                        Cloud and DevOps Engineer skilled in AWS, Terraform, Docker, Kubernetes, CI/CD, Linux, and enterprise infrastructure solutions. Certified in AWS & Azure, passionate about secure and scalable infrastructure. I specialize in automating complex deployment processes, optimizing cloud costs, and ensuring high availability for mission-critical applications.
+                    </p>
+                </div>
+                <div class="grid md:grid-cols-3 gap-8 mt-12">
+                    <div class="text-center">
+                        <div class="bg-primary text-white w-16 h-16 rounded-full flex items-center justify-center mx-auto mb-4">
+                            <i class="fas fa-cloud text-2xl"></i>
+                        </div>
+                        <h3 class="font-semibold text-lg mb-2">Cloud Architecture</h3>
+                        <p class="text-gray-600">AWS & Azure certified with extensive experience in cloud-native solutions</p>
+                    </div>
+                    <div class="text-center">
+                        <div class="bg-accent text-white w-16 h-16 rounded-full flex items-center justify-center mx-auto mb-4">
+                            <i class="fas fa-cogs text-2xl"></i>
+                        </div>
+                        <h3 class="font-semibold text-lg mb-2">DevOps Automation</h3>
+                        <p class="text-gray-600">CI/CD pipelines, Infrastructure as Code, and containerization expertise</p>
+                    </div>
+                    <div class="text-center">
+                        <div class="bg-secondary text-white w-16 h-16 rounded-full flex items-center justify-center mx-auto mb-4">
+                            <i class="fas fa-shield-alt text-2xl"></i>
+                        </div>
+                        <h3 class="font-semibold text-lg mb-2">Security & Compliance</h3>
+                        <p class="text-gray-600">HIPAA compliance, security best practices, and robust infrastructure</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <!-- @END_COMPONENT: AboutSection -->
+
+    <!-- @COMPONENT: ExperienceSection [work history timeline] -->
+    <section id="experience" class="py-20 bg-gray-50">
+        <div class="container mx-auto px-6">
+            <div class="max-w-6xl mx-auto">
+                <h2 class="text-4xl font-bold text-center text-gray-900 mb-8">Professional Experience</h2>
+                <div class="w-24 h-1 bg-primary mx-auto mb-16"></div>
+                
+                <div class="space-y-12">
+                    <!-- @MAP: experiences.map(experience => ( -->
+                    <!-- Feedback Medical Experience -->
+                    <div class="bg-white rounded-2xl p-8 shadow-lg hover:shadow-xl transition-shadow duration-300">
+                        <div class="flex flex-col lg:flex-row lg:justify-between lg:items-start mb-6">
+                            <div class="flex-1">
+                                <h3 class="text-2xl font-bold text-gray-900 mb-2">Cloud & DevOps Engineer</h3>
+                                <h4 class="text-xl text-primary font-semibold mb-2">Feedback Medical</h4>
+                                <p class="text-gray-600 font-medium">Jan 2025 – Present</p>
+                            </div>
+                            <div class="mt-4 lg:mt-0">
+                                <span class="bg-green-100 text-green-800 px-3 py-1 rounded-full text-sm font-medium">Current Role</span>
+                            </div>
+                        </div>
+                        <ul class="space-y-3 text-gray-700">
+                            <li class="flex items-start">
+                                <i class="fas fa-chevron-right text-primary mt-1 mr-3"></i>
+                                <span>Deployed and configured cloud-native applications on AWS using ECS, EKS, and Lambda</span>
+                            </li>
+                            <li class="flex items-start">
+                                <i class="fas fa-chevron-right text-primary mt-1 mr-3"></i>
+                                <span>Automated infrastructure provisioning with Terraform and Jenkins, reducing deployment time by 70%</span>
+                            </li>
+                            <li class="flex items-start">
+                                <i class="fas fa-chevron-right text-primary mt-1 mr-3"></i>
+                                <span>Implemented monitoring solutions using CloudWatch, Prometheus, and Grafana for 99.9% uptime</span>
+                            </li>
+                            <li class="flex items-start">
+                                <i class="fas fa-chevron-right text-primary mt-1 mr-3"></i>
+                                <span>Ensured security compliance and supported enterprise IT operations</span>
+                            </li>
+                            <li class="flex items-start">
+                                <i class="fas fa-chevron-right text-primary mt-1 mr-3"></i>
+                                <span>Optimized AWS costs through resource right-sizing and reserved instance planning</span>
+                            </li>
+                            <li class="flex items-start">
+                                <i class="fas fa-chevron-right text-primary mt-1 mr-3"></i>
+                                <span>Managed containerized applications using Docker and Kubernetes orchestration</span>
+                            </li>
+                            <li class="flex items-start">
+                                <i class="fas fa-chevron-right text-primary mt-1 mr-3"></i>
+                                <span>Established backup and disaster recovery procedures for critical systems</span>
+                            </li>
+                        </ul>
+                    </div>
+
+                    <!-- Cognizant Experience -->
+                    <div class="bg-white rounded-2xl p-8 shadow-lg hover:shadow-xl transition-shadow duration-300">
+                        <div class="flex flex-col lg:flex-row lg:justify-between lg:items-start mb-6">
+                            <div class="flex-1">
+                                <h3 class="text-2xl font-bold text-gray-900 mb-2">Software Engineer</h3>
+                                <h4 class="text-xl text-primary font-semibold mb-2">Cognizant Technology Solutions</h4>
+                                <p class="text-gray-600 font-medium">Jul 2022 – Sept 2024</p>
+                            </div>
+                            <div class="mt-4 lg:mt-0">
+                                <span class="bg-blue-100 text-blue-800 px-3 py-1 rounded-full text-sm font-medium">2 years 3 months</span>
+                            </div>
+                        </div>
+                        <ul class="space-y-3 text-gray-700">
+                            <li class="flex items-start">
+                                <i class="fas fa-chevron-right text-primary mt-1 mr-3"></i>
+                                <span>Developed and maintained RESTful APIs using Java Spring Boot for enterprise applications</span>
+                            </li>
+                            <li class="flex items-start">
+                                <i class="fas fa-chevron-right text-primary mt-1 mr-3"></i>
+                                <span>Automated AWS infrastructure provisioning with Terraform, managing 50+ cloud resources</span>
+                            </li>
+                            <li class="flex items-start">
+                                <i class="fas fa-chevron-right text-primary mt-1 mr-3"></i>
+                                <span>Built and maintained CI/CD pipelines using Jenkins, reducing manual deployment efforts by 80%</span>
+                            </li>
+                            <li class="flex items-start">
+                                <i class="fas fa-chevron-right text-primary mt-1 mr-3"></i>
+                                <span>Implemented load balancing and auto-scaling solutions for high-availability applications</span>
+                            </li>
+                            <li class="flex items-start">
+                                <i class="fas fa-chevron-right text-primary mt-1 mr-3"></i>
+                                <span>Configured monitoring and alerting systems for proactive issue resolution</span>
+                            </li>
+                            <li class="flex items-start">
+                                <i class="fas fa-chevron-right text-primary mt-1 mr-3"></i>
+                                <span>Collaborated with cross-functional teams to deliver scalable cloud solutions</span>
+                            </li>
+                            <li class="flex items-start">
+                                <i class="fas fa-chevron-right text-primary mt-1 mr-3"></i>
+                                <span>Performed database optimization and maintenance for MySQL and MongoDB systems</span>
+                            </li>
+                            <li class="flex items-start">
+                                <i class="fas fa-chevron-right text-primary mt-1 mr-3"></i>
+                                <span>Mentored junior developers on best practices for cloud architecture and DevOps workflows</span>
+                            </li>
+                        </ul>
+                    </div>
+                    <!-- @END_MAP )) -->
+                </div>
+            </div>
+        </div>
+    </section>
+    <!-- @END_COMPONENT: ExperienceSection -->
+
+    <!-- @COMPONENT: SkillsSection [categorized technical skills] -->
+    <section id="skills" class="py-20 bg-white">
+        <div class="container mx-auto px-6">
+            <div class="max-w-6xl mx-auto">
+                <h2 class="text-4xl font-bold text-center text-gray-900 mb-8">Technical Skills</h2>
+                <div class="w-24 h-1 bg-primary mx-auto mb-16"></div>
+                
+                <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
+                    <!-- Cloud Platforms -->
+                    <div class="bg-gradient-to-br from-blue-50 to-blue-100 p-8 rounded-2xl shadow-lg hover:shadow-xl transition-shadow duration-300">
+                        <div class="text-blue-600 mb-4">
+                            <i class="fas fa-cloud text-3xl"></i>
+                        </div>
+                        <h3 class="text-xl font-bold text-gray-900 mb-4">Cloud Platforms</h3>
+                        <div class="space-y-2">
+                            <span class="inline-block bg-blue-200 text-blue-800 px-3 py-1 rounded-full text-sm font-medium mr-2 mb-2">AWS</span>
+                            <span class="inline-block bg-blue-200 text-blue-800 px-3 py-1 rounded-full text-sm font-medium mr-2 mb-2">Azure</span>
+                        </div>
+                    </div>
+
+                    <!-- DevOps Tools -->
+                    <div class="bg-gradient-to-br from-green-50 to-green-100 p-8 rounded-2xl shadow-lg hover:shadow-xl transition-shadow duration-300">
+                        <div class="text-green-600 mb-4">
+                            <i class="fas fa-cogs text-3xl"></i>
+                        </div>
+                        <h3 class="text-xl font-bold text-gray-900 mb-4">DevOps & Automation</h3>
+                        <div class="space-y-2">
+                            <span class="inline-block bg-green-200 text-green-800 px-3 py-1 rounded-full text-sm font-medium mr-2 mb-2">Terraform</span>
+                            <span class="inline-block bg-green-200 text-green-800 px-3 py-1 rounded-full text-sm font-medium mr-2 mb-2">Docker</span>
+                            <span class="inline-block bg-green-200 text-green-800 px-3 py-1 rounded-full text-sm font-medium mr-2 mb-2">Kubernetes</span>
+                            <span class="inline-block bg-green-200 text-green-800 px-3 py-1 rounded-full text-sm font-medium mr-2 mb-2">Jenkins</span>
+                            <span class="inline-block bg-green-200 text-green-800 px-3 py-1 rounded-full text-sm font-medium mr-2 mb-2">GitHub Actions</span>
+                        </div>
+                    </div>
+
+                    <!-- Web Servers & Middleware -->
+                    <div class="bg-gradient-to-br from-purple-50 to-purple-100 p-8 rounded-2xl shadow-lg hover:shadow-xl transition-shadow duration-300">
+                        <div class="text-purple-600 mb-4">
+                            <i class="fas fa-server text-3xl"></i>
+                        </div>
+                        <h3 class="text-xl font-bold text-gray-900 mb-4">Middleware & Servers</h3>
+                        <div class="space-y-2">
+                            <span class="inline-block bg-purple-200 text-purple-800 px-3 py-1 rounded-full text-sm font-medium mr-2 mb-2">Tomcat</span>
+                            <span class="inline-block bg-purple-200 text-purple-800 px-3 py-1 rounded-full text-sm font-medium mr-2 mb-2">Nginx</span>
+                            <span class="inline-block bg-purple-200 text-purple-800 px-3 py-1 rounded-full text-sm font-medium mr-2 mb-2">Apache</span>
+                            <span class="inline-block bg-purple-200 text-purple-800 px-3 py-1 rounded-full text-sm font-medium mr-2 mb-2">HAProxy</span>
+                        </div>
+                    </div>
+
+                    <!-- Databases -->
+                    <div class="bg-gradient-to-br from-red-50 to-red-100 p-8 rounded-2xl shadow-lg hover:shadow-xl transition-shadow duration-300">
+                        <div class="text-red-600 mb-4">
+                            <i class="fas fa-database text-3xl"></i>
+                        </div>
+                        <h3 class="text-xl font-bold text-gray-900 mb-4">Databases</h3>
+                        <div class="space-y-2">
+                            <span class="inline-block bg-red-200 text-red-800 px-3 py-1 rounded-full text-sm font-medium mr-2 mb-2">MySQL</span>
+                            <span class="inline-block bg-red-200 text-red-800 px-3 py-1 rounded-full text-sm font-medium mr-2 mb-2">MongoDB</span>
+                            <span class="inline-block bg-red-200 text-red-800 px-3 py-1 rounded-full text-sm font-medium mr-2 mb-2">Redis</span>
+                            <span class="inline-block bg-red-200 text-red-800 px-3 py-1 rounded-full text-sm font-medium mr-2 mb-2">MariaDB</span>
+                        </div>
+                    </div>
+
+                    <!-- Monitoring & Tools -->
+                    <div class="bg-gradient-to-br from-yellow-50 to-yellow-100 p-8 rounded-2xl shadow-lg hover:shadow-xl transition-shadow duration-300">
+                        <div class="text-yellow-600 mb-4">
+                            <i class="fas fa-chart-line text-3xl"></i>
+                        </div>
+                        <h3 class="text-xl font-bold text-gray-900 mb-4">Monitoring & Tools</h3>
+                        <div class="space-y-2">
+                            <span class="inline-block bg-yellow-200 text-yellow-800 px-3 py-1 rounded-full text-sm font-medium mr-2 mb-2">Git</span>
+                            <span class="inline-block bg-yellow-200 text-yellow-800 px-3 py-1 rounded-full text-sm font-medium mr-2 mb-2">Prometheus</span>
+                            <span class="inline-block bg-yellow-200 text-yellow-800 px-3 py-1 rounded-full text-sm font-medium mr-2 mb-2">Grafana</span>
+                            <span class="inline-block bg-yellow-200 text-yellow-800 px-3 py-1 rounded-full text-sm font-medium mr-2 mb-2">ELK</span>
+                            <span class="inline-block bg-yellow-200 text-yellow-800 px-3 py-1 rounded-full text-sm font-medium mr-2 mb-2">RabbitMQ</span>
+                        </div>
+                    </div>
+
+                    <!-- Programming Languages -->
+                    <div class="bg-gradient-to-br from-indigo-50 to-indigo-100 p-8 rounded-2xl shadow-lg hover:shadow-xl transition-shadow duration-300">
+                        <div class="text-indigo-600 mb-4">
+                            <i class="fas fa-code text-3xl"></i>
+                        </div>
+                        <h3 class="text-xl font-bold text-gray-900 mb-4">Programming Languages</h3>
+                        <div class="space-y-2">
+                            <span class="inline-block bg-indigo-200 text-indigo-800 px-3 py-1 rounded-full text-sm font-medium mr-2 mb-2">Java</span>
+                            <span class="inline-block bg-indigo-200 text-indigo-800 px-3 py-1 rounded-full text-sm font-medium mr-2 mb-2">Python</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <!-- @END_COMPONENT: SkillsSection -->
+
+    <!-- @COMPONENT: CertificationsSection [professional credentials] -->
+    <section id="certifications" class="py-20 bg-gray-50">
+        <div class="container mx-auto px-6">
+            <div class="max-w-4xl mx-auto">
+                <h2 class="text-4xl font-bold text-center text-gray-900 mb-8">Certifications</h2>
+                <div class="w-24 h-1 bg-primary mx-auto mb-16"></div>
+                
+                <div class="grid md:grid-cols-2 gap-8">
+                    <!-- @MAP: certifications.map(cert => ( -->
+                    <div class="bg-white p-8 rounded-2xl shadow-lg hover:shadow-xl transition-shadow duration-300 border-l-4 border-blue-500">
+                        <div class="flex items-center mb-4">
+                            <div class="bg-blue-100 text-blue-600 w-12 h-12 rounded-full flex items-center justify-center mr-4">
+                                <i class="fab fa-aws text-xl"></i>
+                            </div>
+                            <h3 class="text-xl font-bold text-gray-900">AWS Cloud Practitioner</h3>
+                        </div>
+                        <p class="text-gray-600">Amazon Web Services foundational certification covering core AWS services and cloud concepts</p>
+                    </div>
+
+                    <div class="bg-white p-8 rounded-2xl shadow-lg hover:shadow-xl transition-shadow duration-300 border-l-4 border-blue-600">
+                        <div class="flex items-center mb-4">
+                            <div class="bg-blue-100 text-blue-600 w-12 h-12 rounded-full flex items-center justify-center mr-4">
+                                <i class="fab fa-microsoft text-xl"></i>
+                            </div>
+                            <h3 class="text-xl font-bold text-gray-900">Microsoft Azure Fundamentals (AZ-900)</h3>
+                        </div>
+                        <p class="text-gray-600">Microsoft Azure foundational knowledge including core services, pricing, and support</p>
+                    </div>
+
+                    <div class="bg-white p-8 rounded-2xl shadow-lg hover:shadow-xl transition-shadow duration-300 border-l-4 border-yellow-500">
+                        <div class="flex items-center mb-4">
+                            <div class="bg-yellow-100 text-yellow-600 w-12 h-12 rounded-full flex items-center justify-center mr-4">
+                                <i class="fas fa-chart-bar text-xl"></i>
+                            </div>
+                            <h3 class="text-xl font-bold text-gray-900">Power BI Data Analyst Associate</h3>
+                        </div>
+                        <p class="text-gray-600">Microsoft Power BI certification for data modeling, visualization, and business intelligence</p>
+                    </div>
+
+                    <div class="bg-white p-8 rounded-2xl shadow-lg hover:shadow-xl transition-shadow duration-300 border-l-4 border-green-500">
+                        <div class="flex items-center mb-4">
+                            <div class="bg-green-100 text-green-600 w-12 h-12 rounded-full flex items-center justify-center mr-4">
+                                <i class="fas fa-laptop-code text-xl"></i>
+                            </div>
+                            <h3 class="text-xl font-bold text-gray-900">Mendix Intermediate Developer</h3>
+                        </div>
+                        <p class="text-gray-600">Low-code application development platform certification for rapid application development</p>
+                    </div>
+                    <!-- @END_MAP )) -->
+                </div>
+            </div>
+        </div>
+    </section>
+    <!-- @END_COMPONENT: CertificationsSection -->
+
+    <!-- @COMPONENT: ContactSection [contact form and information] -->
+    <section id="contact" class="py-20 bg-white">
+        <div class="container mx-auto px-6">
+            <div class="max-w-6xl mx-auto">
+                <h2 class="text-4xl font-bold text-center text-gray-900 mb-8">Get In Touch</h2>
+                <div class="w-24 h-1 bg-primary mx-auto mb-16"></div>
+                
+                <div class="grid lg:grid-cols-2 gap-12">
+                    <!-- Contact Information -->
+                    <div>
+                        <h3 class="text-2xl font-bold text-gray-900 mb-8">Let's Connect</h3>
+                        <p class="text-gray-600 mb-8 text-lg">
+                            I'm always open to discussing new opportunities, interesting projects, or just having a conversation about cloud infrastructure and DevOps best practices.
+                        </p>
+                        
+                        <div class="space-y-6">
+                            <div class="flex items-center">
+                                <div class="bg-primary text-white w-12 h-12 rounded-full flex items-center justify-center mr-4">
+                                    <i class="fas fa-envelope"></i>
+                                </div>
+                                <div>
+                                    <h4 class="font-semibold text-gray-900">Email</h4>
+                                    <a href="mailto:abhishek184054@gmail.com" class="text-primary hover:text-blue-700 transition-colors duration-300">abhishek184054@gmail.com</a>
+                                </div>
+                            </div>
+                            
+                            <div class="flex items-center">
+                                <div class="bg-blue-600 text-white w-12 h-12 rounded-full flex items-center justify-center mr-4">
+                                    <i class="fab fa-linkedin"></i>
+                                </div>
+                                <div>
+                                    <h4 class="font-semibold text-gray-900">LinkedIn</h4>
+                                    <a href="https://linkedin.com/in/abhishek-chauhan-429554206" target="_blank" class="text-primary hover:text-blue-700 transition-colors duration-300">linkedin.com/in/abhishek-chauhan-429554206</a>
+                                </div>
+                            </div>
+                            
+                            <div class="flex items-center">
+                                <div class="bg-accent text-white w-12 h-12 rounded-full flex items-center justify-center mr-4">
+                                    <i class="fas fa-phone"></i>
+                                </div>
+                                <div>
+                                    <h4 class="font-semibold text-gray-900">Phone</h4>
+                                    <a href="tel:+918091753343" class="text-primary hover:text-blue-700 transition-colors duration-300">+91-8091753343</a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <!-- Contact Form -->
+                    <div class="bg-gray-50 p-8 rounded-2xl">
+                        <h3 class="text-2xl font-bold text-gray-900 mb-6">Send Message</h3>
+                        
+                        <!-- @STATE: formData:object, isSubmitting:boolean, formErrors:object, submitSuccess:boolean -->
+                        <form class="space-y-6" data-event="submit:handleFormSubmit" data-implementation="Form validation and submission logic">
+                            <div>
+                                <label for="name" class="block text-sm font-semibold text-gray-700 mb-2">Name *</label>
+                                <input 
+                                    type="text" 
+                                    id="name" 
+                                    name="name" 
+                                    required
+                                    class="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-primary focus:border-transparent transition-colors duration-300"
+                                    placeholder="Your full name"
+                                    data-bind="formData.name"
+                                >
+                                <!-- @FUNCTIONALITY: Add validation error display -->
+                                <div class="text-red-600 text-sm mt-1 hidden" data-bind="formErrors.name"></div>
+                            </div>
+                            
+                            <div>
+                                <label for="email" class="block text-sm font-semibold text-gray-700 mb-2">Email *</label>
+                                <input 
+                                    type="email" 
+                                    id="email" 
+                                    name="email" 
+                                    required
+                                    class="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-primary focus:border-transparent transition-colors duration-300"
+                                    placeholder="your.email@example.com"
+                                    data-bind="formData.email"
+                                >
+                                <div class="text-red-600 text-sm mt-1 hidden" data-bind="formErrors.email"></div>
+                            </div>
+                            
+                            <div>
+                                <label for="subject" class="block text-sm font-semibold text-gray-700 mb-2">Subject *</label>
+                                <input 
+                                    type="text" 
+                                    id="subject" 
+                                    name="subject" 
+                                    required
+                                    class="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-primary focus:border-transparent transition-colors duration-300"
+                                    placeholder="What's this about?"
+                                    data-bind="formData.subject"
+                                >
+                                <div class="text-red-600 text-sm mt-1 hidden" data-bind="formErrors.subject"></div>
+                            </div>
+                            
+                            <div>
+                                <label for="message" class="block text-sm font-semibold text-gray-700 mb-2">Message *</label>
+                                <textarea 
+                                    id="message" 
+                                    name="message" 
+                                    rows="5" 
+                                    required
+                                    class="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-primary focus:border-transparent transition-colors duration-300 resize-vertical"
+                                    placeholder="Tell me about your project or just say hello!"
+                                    data-bind="formData.message"
+                                ></textarea>
+                                <div class="text-red-600 text-sm mt-1 hidden" data-bind="formErrors.message"></div>
+                            </div>
+                            
+                            <button 
+                                type="submit" 
+                                class="w-full bg-primary text-white px-8 py-4 rounded-lg font-semibold hover:bg-blue-700 focus:ring-4 focus:ring-blue-200 transition-all duration-300 disabled:opacity-50 disabled:cursor-not-allowed"
+                                data-bind="!isSubmitting"
+                                data-event="click:submitForm"
+                            >
+                                <span data-bind="!isSubmitting">
+                                    <i class="fas fa-paper-plane mr-2"></i>Send Message
+                                </span>
+                                <span class="hidden" data-bind="isSubmitting">
+                                    <i class="fas fa-spinner fa-spin mr-2"></i>Sending...
+                                </span>
+                            </button>
+                            
+                            <!-- Success Message -->
+                            <div class="bg-green-100 border border-green-400 text-green-700 px-4 py-3 rounded-lg hidden" data-bind="submitSuccess">
+                                <i class="fas fa-check-circle mr-2"></i>Thank you for your message! I'll get back to you soon.
+                            </div>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <!-- @END_COMPONENT: ContactSection -->
+
+    <!-- @COMPONENT: Footer [copyright and additional links] -->
+    <footer class="bg-gray-900 text-white py-12">
+        <div class="container mx-auto px-6">
+            <div class="flex flex-col md:flex-row justify-between items-center">
+                <div class="mb-6 md:mb-0">
+                    <h3 class="text-2xl font-bold mb-2">Abhishek Chauhan</h3>
+                    <p class="text-gray-400">Cloud & DevOps Engineer</p>
+                </div>
+                
+                <div class="flex space-x-6">
+                    <a href="mailto:abhishek184054@gmail.com" class="text-gray-400 hover:text-white transition-colors duration-300">
+                        <i class="fas fa-envelope text-xl"></i>
+                    </a>
+                    <a href="https://linkedin.com/in/abhishek-chauhan-429554206" class="text-gray-400 hover:text-white transition-colors duration-300" target="_blank">
+                        <i class="fab fa-linkedin text-xl"></i>
+                    </a>
+                    <a href="tel:+918091753343" class="text-gray-400 hover:text-white transition-colors duration-300">
+                        <i class="fas fa-phone text-xl"></i>
+                    </a>
+                </div>
+            </div>
+            
+            <div class="border-t border-gray-800 mt-8 pt-8 text-center text-gray-400">
+                <p>&copy; 2025 Abhishek Chauhan. All rights reserved. Built with React & TailwindCSS.</p>
+            </div>
+        </div>
+    </footer>
+    <!-- @END_COMPONENT: Footer -->
+
+    <script>
+        // Mobile menu functionality
+        (function() {
+            const mobileMenuBtn = document.getElementById('mobile-menu-btn');
+            const mobileMenu = document.getElementById('mobile-menu');
+            
+            mobileMenuBtn?.addEventListener('click', function() {
+                mobileMenu?.classList.toggle('hidden');
+            });
+        })();
+
+        // Smooth scrolling for navigation links
+        (function() {
+            document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+                anchor.addEventListener('click', function (e) {
+                    e.preventDefault();
+                    const target = document.querySelector(this.getAttribute('href'));
+                    if (target) {
+                        target.scrollIntoView({
+                            behavior: 'smooth',
+                            block: 'start'
+                        });
+                        // Close mobile menu if open
+                        const mobileMenu = document.getElementById('mobile-menu');
+                        mobileMenu?.classList.add('hidden');
+                    }
+                });
+            });
+        })();
+
+        // Download Resume functionality placeholder
+        (function() {
+            const downloadBtn = document.querySelector('[data-event="click:downloadResume"]');
+            downloadBtn?.addEventListener('click', function() {
+                // TODO: Implement actual resume download functionality
+                alert('Resume download functionality would be implemented here. You would link to your actual resume PDF file.');
+            });
+        })();
+
+        // Form submission handling
+        (function() {
+            const form = document.querySelector('form[data-event="submit:handleFormSubmit"]');
+            
+            form?.addEventListener('submit', function(e) {
+                e.preventDefault();
+                
+                // TODO: Implement form validation logic
+                const formData = new FormData(this);
+                const name = formData.get('name');
+                const email = formData.get('email');
+                const subject = formData.get('subject');
+                const message = formData.get('message');
+                
+                // Basic validation example
+                if (!name || !email || !subject || !message) {
+                    alert('Please fill in all required fields.');
+                    return;
+                }
+                
+                // TODO: Implement actual form submission to backend service
+                // For now, show success message simulation
+                const submitBtn = this.querySelector('button[type="submit"]');
+                const successMessage = this.querySelector('[data-bind="submitSuccess"]');
+                
+                submitBtn.textContent = 'Sending...';
+                submitBtn.disabled = true;
+                
+                setTimeout(() => {
+                    submitBtn.textContent = 'Send Message';
+                    submitBtn.disabled = false;
+                    successMessage?.classList.remove('hidden');
+                    this.reset();
+                    
+                    setTimeout(() => {
+                        successMessage?.classList.add('hidden');
+                    }, 5000);
+                }, 2000);
+            });
+        })();
+
+        // Active navigation highlighting based on scroll position
+        (function() {
+            const sections = document.querySelectorAll('section[id]');
+            const navLinks = document.querySelectorAll('a[href^="#"]');
+            
+            function updateActiveNav() {
+                let current = '';
+                sections.forEach(section => {
+                    const sectionTop = section.offsetTop;
+                    const sectionHeight = section.clientHeight;
+                    if (window.scrollY >= (sectionTop - 200)) {
+                        current = section.getAttribute('id');
+                    }
+                });
+                
+                navLinks.forEach(link => {
+                    link.classList.remove('text-primary');
+                    if (link.getAttribute('href') === `#${current}`) {
+                        link.classList.add('text-primary');
+                    }
+                });
+            }
+            
+            window.addEventListener('scroll', updateActiveNav);
+            updateActiveNav(); // Initial call
+        })();
+    </script>
+</body>
+</html>

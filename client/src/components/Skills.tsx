@@ -17,7 +17,7 @@ export default function Skills() {
       gradient: "from-green-50 to-green-100",
       iconColor: "text-green-600",
       badgeColor: "bg-green-200 text-green-800",
-      skills: ["Terraform", "Docker", "Kubernetes", "Jenkins", "GitHub Actions"],
+      skills: ["Terraform", "Docker", "Kubernetes", "Jenkins", "GitHub"],
       testId: "card-skills-devops"
     },
     {
@@ -35,7 +35,7 @@ export default function Skills() {
       gradient: "from-red-50 to-red-100",
       iconColor: "text-red-600",
       badgeColor: "bg-red-200 text-red-800",
-      skills: ["MySQL", "MongoDB", "Redis", "MariaDB"],
+      skills: ["MySQL", "MongoDB", "Redis"],
       testId: "card-skills-databases"
     },
     {
@@ -44,7 +44,7 @@ export default function Skills() {
       gradient: "from-yellow-50 to-yellow-100",
       iconColor: "text-yellow-600",
       badgeColor: "bg-yellow-200 text-yellow-800",
-      skills: ["Git", "Prometheus", "Grafana", "ELK", "RabbitMQ"],
+      skills: ["Git", "Prometheus", "Grafana", "Datadog"],
       testId: "card-skills-monitoring"
     },
     {
