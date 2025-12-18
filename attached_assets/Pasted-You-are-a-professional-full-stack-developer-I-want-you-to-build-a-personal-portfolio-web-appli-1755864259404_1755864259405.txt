@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 You are a professional full-stack developer.  
 I want you to build a **personal portfolio web application** for me using **React + TailwindCSS**.  
 The app should showcase my resume details, experience, and skills in a clean and modern UI.  
@@ -55,3 +56,62 @@ The app should showcase my resume details, experience, and skills in a clean and
 - Provide me the complete **React code** in one file (App.js) with Tailwind classes.  
 - Ensure it is production-ready.  
 - After generating the code, give me instructions to deploy it on **GitHub Pages or Netlify**.
+=======
+You are a professional full-stack developer.  
+I want you to build a **personal portfolio web application** for me using **React + TailwindCSS**.  
+The app should showcase my resume details, experience, and skills in a clean and modern UI.  
+
+### App Requirements:
+1. **Header / Navigation**
+   - Name: Abhishek Chauhan
+   - Navigation links: Home, About, Experience, Skills, Certifications, Contact
+
+2. **Home (Hero Section)**
+   - Title: "Cloud & DevOps Engineer"
+   - Short tagline: "3+ years of experience in AWS, Infra Operations, and Healthcare IT Integration"
+
+3. **About Section**
+   - Summary: "Cloud and DevOps Engineer skilled in AWS, Terraform, Docker, Kubernetes, CI/CD, Linux, and healthcare IT integrations (PACS, HIS, RIS, EMR). Certified in AWS & Azure, passionate about secure and scalable infrastructure."
+
+4. **Experience Section**
+   - Feedback Medical (Jan 2025 – Present)  
+     - Deployed and configured cloud-native healthcare applications on AWS.  
+     - Automated infrastructure with Terraform and Jenkins.  
+     - Ensured HIPAA compliance and supported hospital IT teams.  
+   - Cognizant Technology Solutions (Jul 2022 – Sept 2024)  
+     - Developed APIs in Java Spring Boot.  
+     - Automated AWS infra with Terraform.  
+     - Built CI/CD pipelines with Jenkins.
+
+5. **Skills Section**
+   - Cloud: AWS, Azure  
+   - DevOps: Terraform, Docker, Kubernetes, Jenkins, GitHub Actions  
+   - Middleware: Tomcat, Nginx, Apache, HAProxy  
+   - Databases: MySQL, MongoDB, Redis, MariaDB  
+   - Tools: Git, Prometheus, Grafana, ELK, RabbitMQ  
+   - Languages: Java (basic), Python
+
+6. **Certifications Section**
+   - AWS Cloud Practitioner  
+   - Microsoft Azure Fundamentals (AZ-900)  
+   - Power BI Data Analyst Associate  
+   - Mendix Intermediate Developer  
+
+7. **Contact Section**
+   - Email: abhishek184054@gmail.com  
+   - LinkedIn: linkedin.com/in/abhishek-chauhan-429554206  
+   - Phone: +91-8091753343  
+
+### Technical Instructions:
+- Use **React + TailwindCSS** for frontend.  
+- Layout: Minimal, professional, mobile responsive.  
+- Sections should be scrollable with smooth navigation.  
+- Add a "Download Resume" button linking to my PDF resume.  
+- Use cards and icons for skills to make them visually attractive.  
+- Add a footer with copyright.
+
+### Output:
+- Provide me the complete **React code** in one file (App.js) with Tailwind classes.  
+- Ensure it is production-ready.  
+- After generating the code, give me instructions to deploy it on **GitHub Pages or Netlify**.
+>>>>>>> da4262d (Initial commit with updated package-lock.json)
