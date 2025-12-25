@@ -1,28 +1,27 @@
-import { Route, Switch } from "wouter";
-import { Hono } from 'hono';
+import { Hono } from "hono";
 
 const app = new Hono();
 
-// ✅ Logging middleware
-app.use('*', async (c, next) => {
+// Logging middleware
+app.use("*", async (c, next) => {
   const start = Date.now();
   await next();
   const duration = Date.now() - start;
   console.log(`${c.req.method} ${c.req.path} ${c.res.status} in ${duration}ms`);
 });
 
-// ✅ Example API route
-app.get('/api/hello', (c) => {
-  return c.json({ message: 'Hello from Cloudflare Worker!' });
+// API route
+app.get("/api/hello", (c) => {
+  return c.json({ message: "Hello from Cloudflare Worker!" });
 });
 
-// ✅ Example error handling
+// Static route
+app.get("/", (c) => c.text("Welcome to AkshuCloud"));
+
+// Error handling
 app.onError((err, c) => {
-  console.error('Error:', err);
-  return c.json({ message: err.message || 'Internal Server Error' }, 500);
+  console.error("Error:", err);
+  return c.json({ message: err.message || "Internal Server Error" }, 500);
 });
-
-// ✅ Example static route
-app.get('/', (c) => c.text('Welcome to AkshuCloud'));
 
 export default app;

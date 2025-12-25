@@ -17,29 +17,27 @@ export default defineConfig(async () => {
       alias: {
         "@": path.resolve(__dirname, "client", "src"),
         "@shared": path.resolve(__dirname, "shared"),
-        "@assets": path.resolve(__dirname, "attached_assets"),
-      },
+        "@assets": path.resolve(__dirname, "attached_assets")
+      }
     },
     root: path.resolve(__dirname, "client"),
     build: {
       outDir: path.resolve(__dirname, "dist/public"),
       emptyOutDir: true,
       rollupOptions: {
-        // Mark all problematic third-party modules as external
         external: [
           "clsx",
           "tailwind-merge",
           "class-variance-authority",
           "@radix-ui/react-toast",
           "@radix-ui/react-tooltip",
+          "@radix-ui/react-label",
           "react-icons/fa",
-          "@radix-ui/react-label",  
-          "react-icons/md", // add more icon packs if used
-        ],
-      },
+          "react-icons/md"
+        ]
+      }
     },
     optimizeDeps: {
-      // Pre-bundle all these dependencies for dev and build
       include: [
         "clsx",
         "tailwind-merge",
@@ -48,14 +46,11 @@ export default defineConfig(async () => {
         "@radix-ui/react-tooltip",
         "@radix-ui/react-label",
         "react-icons/fa",
-        "react-icons/md", // include icon packs you use
-      ],
+        "react-icons/md"
+      ]
     },
     server: {
-      fs: {
-        strict: true,
-        deny: ["**/.*"],
-      },
-    },
+      fs: { strict: true, deny: ["**/.*"] }
+    }
   };
 });
