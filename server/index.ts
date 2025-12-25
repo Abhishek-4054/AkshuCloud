@@ -1,27 +1,21 @@
-import { Hono } from "hono";
+import express from "express";
+import path from "path";
+import { fileURLToPath } from "url";
 
-const app = new Hono();
+const __filename = fileURLToPath(import.meta.url);
+const __dirname = path.dirname(__filename);
 
-// Logging middleware
-app.use("*", async (c, next) => {
-  const start = Date.now();
-  await next();
-  const duration = Date.now() - start;
-  console.log(`${c.req.method} ${c.req.path} ${c.res.status} in ${duration}ms`);
+const app = express();
+
+// Serve frontend
+app.use(express.static(path.join(__dirname, "public")));
+
+app.get("*", (_, res) => {
+  res.sendFile(path.join(__dirname, "public", "index.html"));
 });
 
-// API route
-app.get("/api/hello", (c) => {
-  return c.json({ message: "Hello from Cloudflare Worker!" });
+// Use PORT from Render
+const PORT = process.env.PORT || 3000;
+app.listen(PORT, () => {
+  console.log(`Server running on port ${PORT}`);
 });
-
-// Static route
-app.get("/", (c) => c.text("Welcome to AkshuCloud"));
-
-// Error handling
-app.onError((err, c) => {
-  console.error("Error:", err);
-  return c.json({ message: err.message || "Internal Server Error" }, 500);
-});
-
-export default app;
